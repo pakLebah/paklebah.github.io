@@ -40,7 +40,7 @@ f(d := d, s := s);
 // It should also work on `procedure` as well.
 ```
 ———  
-I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/2).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/2).  
 Thank you. 😊
 
 ---
