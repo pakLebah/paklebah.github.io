@@ -60,7 +60,7 @@ Lanjut… silakan jalankan aplikasi VS Code lalu buka menu **File** → **Open�
 "omnipascal.freePascalSourcePath": "/home/bee/fpc-src/",
 ```
 
-Baris pertama adalah `"omnipascal.defaultDevelopmentEnvironment"` yaitu jenis *compiler* Pascal yg kita gunakan. Ada dua pilihan yg tersedia, yaitu `FreePascal` (tanpa spasi) dan `Delph`i. Saya atur ke `FreePascal` karena saya menggunakan Free Pascal. Silakan disesuaikan sesuai kebutuhan anda.
+Baris pertama adalah `"omnipascal.defaultDevelopmentEnvironment"` yaitu jenis *compiler* Pascal yg kita gunakan. Ada dua pilihan yg tersedia, yaitu `FreePascal` (tanpa spasi) dan `Delphi`. Saya atur ke `FreePascal` karena saya menggunakan Free Pascal. Silakan disesuaikan sesuai kebutuhan anda.
 
 Baris kedua adalah `"omnipascal.delphiInstallationPath"` yaitu nama berkas *compiler* berikut *folder* tempatnya berada. Untuk Free Pascal di Mac adalah `/usr/local/bin/fpc` (`fpc` adalah nama berkas *compiler*), sedangkan di Windows biasanya `c:\fpc\<versi>\bin\<platform>\fpc.exe` (tergantung yg diberikan saat proses pemasangan). Bagi pengguna Delphi, biasanya di `c:\program files\embarcadero\studio\<versi>\bin\dcc32.exe` (nilai bawaan dari aplikasi pemasang). Silakan disesuaikan saja dengan lokasi berkas masing-masing dan pastikan lokasinya benar.
 
@@ -149,10 +149,10 @@ Kemudian simpan berkas tersebut. Lakukan hal berikut:
 
 Jika semua pemasangan dan pengaturan di atas berjalan baik dan benar, selamat! Selanjutnya anda bisa menikmati kenyamanan menulis program Pascal dengan VS Code seperti pada video yg saya tunjukkan di atas itu. Namun jika masih ada kendala, silakan tanyakan ke grup Pascal Indonesia di [Facebook][35] atau di [Telegram][36].
 
-Demikian. Semoga bermanfaat. 😊
+Demikian. Semoga bermanfaat.
 
 ———  
-I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
 Thank you. 😊
 
 ---
