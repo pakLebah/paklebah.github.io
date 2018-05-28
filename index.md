@@ -1,5 +1,7 @@
 # Mr Bee's Blog on GitHub Pages
 
+[![](img/programming.png)](https://www.shutterstock.com/image-vector/programming-concept-illustration-signs-icons-on-631891025)
+
 > *"I'm not writing computer program, I'm writing digital poetry." ~Mr Bee*
 
 This is my GitHub Pages. I will use this as my programming blog.
