@@ -1,5 +1,7 @@
 # Mr Bee's Blog on GitHub Pages
 
+> *"I'm not writing computer programs, I'm writing digital poetry." ~Mr Bee*
+
 This is my GitHub Pages. I will use this as my programming blog.
 
 Blog posts list:
