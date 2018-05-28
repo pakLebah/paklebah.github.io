@@ -7,7 +7,7 @@ This is my GitHub Pages. I will use this as my programming blog.
 **BLOG POST LIST**
 
 #### May, 2018:
-* [Free Pascal dan VS Code](fpc-and-vscode.md)
+* [Free Pascal dan VS Code](fpc-dan-vscode.md)
 * [Named Parameter for Pascal](namedparameter.md)
 * [Hello World!](hello.md)
 
