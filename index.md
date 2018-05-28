@@ -9,4 +9,4 @@ Blog posts list:
 * [Hello World!](hello.md)
 
 ---
-Also visit my [personal website](https://pak.lebah.web.id), [Tumblr blog](http://paklebah.tumblr.com), [Swift blog](http://medium.com/@paklebah) and [GitHub repositories](http://github.com/pakLebah).
+Also visit my [personal website](https://pak.lebah.web.id), [Tumblr blog](http://paklebah.tumblr.com), [Swift blog](http://medium.com/@pak.lebah) and [GitHub repositories](http://github.com/pakLebah).
