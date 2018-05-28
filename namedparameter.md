@@ -44,4 +44,4 @@ f(d := d, s := s);
 Thank you. 😊
 
 ---
-← [back to Home](index.md)
+<span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
