@@ -1,2 +1,13 @@
-title: Mr Bee on GitHub
-description: A programming blog.
+title : Mr Bee on GitHub
+description : A programming blog.
+
+favicon :
+  enabled : true
+  local :
+    enabled : false
+    partial_url : false
+    type : false
+  remote :
+    enabled : true
+    full_url : https://assets-cdn.github.com/favicon.ico
+    type : ico
