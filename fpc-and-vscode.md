@@ -151,6 +151,13 @@ Jika semua pemasangan dan pengaturan di atas berjalan baik dan benar, selamat! S
 
 Demikian. Semoga bermanfaat. 😊
 
+———  
+I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
+Thank you. 😊
+
+---
+← [back to Home](index.md)
+
 [1]: https://www.facebook.com/groups/Pascal.ID
 [2]: http://freepascal.org
 [3]: http://embarcadero.com/products/delphi
@@ -176,6 +183,7 @@ Demikian. Semoga bermanfaat. 😊
 [23]: https://marketplace.visualstudio.com/items?itemName=webfreak.debug
 [24]: https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb
 [25]: https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons
+[26]: https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory
 [27]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
 [28]: https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks
 [29]: https://marketplace.visualstudio.com/items?itemName=liximomo.sftp
