@@ -7,4 +7,4 @@ This is first post on my GitHub Pages.
 Thank you. 😊
 
 ---
-← [back to Home](index.md)
+<span style="float: left">← [back to Home](index.md)</span> <span style="float: right">Go to TOP</span>
