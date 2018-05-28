@@ -7,5 +7,5 @@ This is first post on my GitHub Pages.
 Thank you. 😊
 
 ---
-<span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>  
+<span style="float: left; margin: 0 0 20px 0">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>  
 
