@@ -9,4 +9,3 @@ Thank you. 😊
 ---
 <span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
 
-.
