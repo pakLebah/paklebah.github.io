@@ -6,7 +6,7 @@ Beberapa waktu yg lalu, di grup [Pascal Indonesia][1] saya menyampaikan bahwa pe
 
 Kemudian saya bagikan berkas-berkas pengaturan VS Code yg saya gunakan sehingga bisa seperti yg ditunjukkan dalam video di atas. Berkas-berkas pengaturan tersebut saya taruh di *gist* [Github][8] di sini meliputi: [`launch.json`][9], [`tasks.json`][10], and [`settings.json`][11]. Lalu saya tunjukkan juga *extension* yg saya gunakan, seperti pada gambar berikut.
 
-<img align="left" valign="top" src="img/vscode_exts.png">
+<img align="left" src="img/vscode_exts.png">
 
 Namun rupanya semua itu belum cukup jelas. Masih ada beberapa anggota grup Pascal.ID yg bertanya tentang bagaimana cara menulis program Pascal di VS Code. Karena itu, saya kemudian menulis artikel ini.
 
