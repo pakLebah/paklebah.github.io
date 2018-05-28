@@ -152,11 +152,11 @@ Jika semua pemasangan dan pengaturan di atas berjalan baik dan benar, selamat! S
 Demikian. Semoga bermanfaat.
 
 ———  
-💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/3).  
 Thank you. 😊
 
 ---
-← [back to Home](index.md)
+<span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
 
 [1]: https://www.facebook.com/groups/Pascal.ID
 [2]: http://freepascal.org
