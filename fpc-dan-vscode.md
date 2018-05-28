@@ -1,6 +1,6 @@
 # Free Pascal dan VS Code
 
-Beberapa waktu yg lalu, di grup [Pascal Indonesia][1] saya menyampaikan bahwa pemrogram [Pascal][2] tidak harus terikat dengan *IDE* seperti [Delphi][3] dan [Lazarus][4] saja. Apalagi jika kita tidak sedang membuat program *GUI* sehingga tidak perlu fitur perancangan form, misalnya membuat program *web* atau *console*. Lalu saya tunjukkan bahwa saya biasa menggunakan aplikasi penyunting [Visual Studio Code][5] dari [Microsoft][6] di komputer [Macbook Pro][7] saya. Ini yg saya tunjukkan:
+Beberapa waktu yg lalu, di grup [Pascal Indonesia][1] saya menyampaikan bahwa pemrogram [Pascal][2] tidak harus terikat dengan *IDE* seperti [Delphi][3] dan [Lazarus][4] saja. Apalagi jika kita tidak sedang membuat program *GUI* sehingga tidak perlu fitur perancangan *form*, misalnya membuat program *web* atau *console*. Lalu saya tunjukkan bahwa saya biasa menggunakan aplikasi penyunting [Visual Studio Code][5] dari [Microsoft][6] di komputer [Macbook Pro][7] saya. Ini yg saya tunjukkan:
 
 ![](img/vscode_fpc_lldb.gif)
 
