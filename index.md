@@ -3,6 +3,7 @@
 This is my GitHub Pages. I will use this as my programming blog.
 
 Blog posts list:
+* [Named Parameter for Pascal](namedparameter.md)
 * [Hello World!](hello.md)
 
 ---
