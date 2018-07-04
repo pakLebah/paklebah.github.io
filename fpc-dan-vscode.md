@@ -44,6 +44,9 @@ Ini adalah *extension* untuk pengayaan warna pada baris komentar kode program. D
 3. [Bookmarks][28]  
 Ini adalah *extension* untuk menambahkan penanda pada baris program. Dengan *extension* ini kita bisa menandai baris-baris program yg penting dan perlu perhatian khusus. Misalnya, kita bisa dengan mudah kembali ke baris yg kita tandai setelah kita meninggalkan komputer. Atau menandai baris yg sementara kita tunda pengerjaannya di lain waktu, dan sebagainya.
 
+4. [Bracket Pair Colorizer][37]  
+Ini adalah *extension* untuk menambahkan warna yg berbeda pada setiap pasangan tanda kurung dan pasangan penanda blok kode program. Dengan *extension* ini kita bisa dengan mudah mengenali setiap pasangan tanda kurung dan blok kode yg sesuai. Ini penting saat kode kita melibatkan banyak tanda kurung atau blok kode yg bertumpuk.
+
 Khusus bagi pemrogram yg biasa bekerja jarak jauh, *extension* berikut harus terpasang, yaitu [sftp][29]. Dengan *extension* ini, proses unduh dan unggah berkas program secara jarak jauh melalui protokol SSH jadi lebih mudah, cepat, dan aman serta langsung dari berkas panel VS Code sendiri. Ada banyak *extension* sejenis ini, namun yg ini adalah yg paling mudah digunakan dan paling ringan yg pernah saya coba.
 
 Setiap selesai pemasangan *extension*, VS Code akan menampilkan tombol **Reload** di baris *extension* yg terkait. Jangan lupa untuk klik tombol tersebut agar *extension* bisa bekerja. Beberapa pengaturan membutuhkan mulai-ulang (*restart*) VS Code, maka lakukanlah itu jika dibutuhkan.
@@ -90,6 +93,8 @@ Dalam `tasks.json` tersebut ada 5 perintah yg saya sediakan, yaitu:
 4. ***Execute Binary*** untuk menjalankan program jadi hasil kompilasi. Ini bermanfaat untuk memastikan program bisa bekerja dan bisa dilakukan pengujian pada program yg sedang kita buat.
 
 5. ***Clean Files*** untuk membersihkan berkas-berkas yg tidak dibutuhkan dari proses kompilasi. Perlu diperhatikan bahwa perintah ini juga menghapus berkas program jadi dari hasil kompilasi.
+
+Sebagai tambahan, anda juga bisa menambahkan perintah untuk mempercantik kode program Pascal dengan memasang [Jedi Code Formatter][38] versi CLI (*Command Line Interface*) di VS Code. Untuk petunjuk lebih lanjut, silakan baca laman JCF-CLI di [sini][39]. Atau anda juga bisa mencoba versi daringnya di [sini][40].
 
 ## Pengaturan Awakutu
 
@@ -194,3 +199,7 @@ Thank you. 😊
 [34]: https://developer.apple.com/xcode/
 [35]: http://facebook.com/groups/Pascal.ID
 [36]: https://t.me/PascalID
+[37]: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
+[38]: http://jedicodeformat.sourceforge.net/
+[39]: https://github.com/git-bee/jcf-cli
+[40]: https://pak.lebah.web.id/jcf
