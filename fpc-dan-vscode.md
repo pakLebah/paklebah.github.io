@@ -84,7 +84,8 @@ Kemudian, silakan anda buka berkas [`tasks.json`][10] dari saya di atas, salin (
 
 Dalam `tasks.json` tersebut ada 5 perintah yg saya sediakan, yaitu:
 
-1. ***Syntax Check*** untuk melakukan kompilasi kode program tanpa perlu menjalankannya. Ini bermanfaat jika kita hanya ingin menguji apakah program kita sudah benar secara sintaks tapi kita tidak ingin betul-betul menjalankan program tersebut.
+1. ***Syntax Check*** untuk melakukan kompilasi kode program tanpa perlu menjalankannya. Ini bermanfaat jika kita hanya ingin menguji apakah program kita sudah benar secara sintaks tapi kita tidak ingin betul-betul menjalankan program tersebut.    
+**PERBARUAN:** Perintah ***Syntax Check*** kini menampilkan pesan kesalahan *compiler* yg semula di panel **Terminal** ke panel **Problem** sehingga tiap pesan bisa diklik dan kursor langsung ditempatkan di posisi kesalahan tersebut berada.
 
 2. ***Build Debug*** untuk melakukan kompilasi program dengan menyertakan informasi awakutu. Ini bermanfaat jika kita ingin melakukan proses awakutu pada program yg sedang kita buat.
 
