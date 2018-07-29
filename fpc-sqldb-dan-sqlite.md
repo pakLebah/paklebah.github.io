@@ -387,6 +387,12 @@ Cukup singkat saja. Ada 2 hal yg dilakukan dalam prosedur `closeDB`, yaitu perta
 
 Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`. Dalam RAD, pelepasan sumber daya ini juga dilakukan otomatis oleh "pemilik" (*owner*) komponen, yg biasanya adalah *form* tempat komponen berada. Namun kali ini harus kita lakukan manual karena tidak ada "pemilik" komponen.
 
+## Demo Program
+
+Berikut demo program lengkap dalam bentuk video (.gif).
+
+![](https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add/raw/f6005b6a27caa0ade96abed1310c951921d56d0b/z_chinook.gif)
+
 ## Kesimpulan
 
 Dari penjelasan di atas, cukup jelas bahwa menulis program *database* tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit panjang, tapi alurnya jelas dan mudah. Tentu contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
