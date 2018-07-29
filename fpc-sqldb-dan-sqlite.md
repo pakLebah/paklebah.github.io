@@ -28,9 +28,25 @@ Kita kali ini akan belajar dari sebuah contoh program yg sudah saya siapkan. Sil
 
 Contoh program hanya terdiri dari 1 berkas saja bernama `chinook.lpr`. Saya namakan demikian karena program tersebut hanya untuk mengakses berkas data `chinook.db` saja. Mari kita bahas isi dari program tersebut.
 
+### Unit Yg Dibutuhkan
+
+Pemrograman *database* dengan SQLdb dan SQLite membutuhkan setidaknya 2 *unit*, yaitu:
+- *unit* `sqldb.pas` berisi komponen-komponen berikut:
+  - [`TSQLConnection`][18] untuk koneksi ke sistem *database*.
+  - [`TSQLTransaction`][19] untuk manajemen transaksi data.
+  - [`TSQLQuery`][20] untuk menjalankan perintah SQL.
+- *unit* `sqlite3conn.pas` berisi komponen berikut:
+  - [`TSQLite3Connection`][21] untuk akses data ke berkas SQLite. *Class* ini adalah turunan dari *class* `TSQLConnection` dengan implementasi khusus untuk SQLite (versi 3).
+
+Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-komponen visual SQLdb dari palet SQLdb ke *form*. Namun kali ini kita harus menambahkan sendiri di blok [`uses`][17] di program Pascal kita. Masih ada beberapa *unit* lain dari paket komponen SQLdb untuk kegunaan dan manfaat yg berbeda, misalnya `db.pas`, namun itu tidak dibutuhkan dalam program kita ini.
+
+![](http://wiki.freepascal.org/images/8/82/sqldbcomponents.png)
+
+> **INFO:** Selain SQLite, SQLdb juga menyediakan komponen untuk koneksi ke berbagai jenis sistem *database* seperti yg ditunjukan dalam gambar palet SQLdb di atas. Misalnya ke MS SQL, mySQL, MariaDB, Firebird, PostgreSQL, Oracle, atau ODBC, dan lain sebagainya.
+
 ### Bagian Utama
 
-Kita mulai dari bagian utama program. Silakan lompat ke baris nomor [235][13], kode yg kita perhatikan adalah sebagai berikut:
+Selanjutnya kita mari bahas dari bagian utama program. Silakan lompat ke baris nomor [235][13], kode yg kita perhatikan adalah sebagai berikut:
 
 ```pascal
 //# main program
@@ -51,25 +67,9 @@ Cukup singkat, jelas, dan mudah dimengerti, bukan? Bagian utama program berisi p
 
 > **CATATAN:** Kita asumsikan berkas data `chinook.db` berada dalam *folder* yg sama dengan program sehingga cukup disebut nama berkasnya saja. Namun jika berbeda lokasi, sertakan tujuan (*path*) berkas dengan benar. 
 
-### Komponen Yg Dibutuhkan
-
-Pemrograman *database* dengan SQLdb dan SQLite membutuhkan setidaknya 2 *unit*, yaitu:
-- *unit* `sqldb.pas` berisi komponen-komponen berikut:
-  - [`TSQLConnection`][18] untuk koneksi ke sistem *database*.
-  - [`TSQLTransaction`][19] untuk manajemen transaksi data.
-  - [`TSQLQuery`][20] untuk menjalankan perintah SQL.
-- *unit* `sqlite3conn.pas` berisi komponen berikut:
-  - [`TSQLite3Connection`][21] untuk akses data ke berkas SQLite. *Class* ini adalah turunan dari *class* `TSQLConnection` dengan implementasi khusus untuk SQLite (versi 3).
-
-Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-komponen visual SQLdb dari palet SQLdb ke *form*. Namun kali ini kita harus menambahkan sendiri di blok [`uses`][17] di program Pascal kita. Masih ada beberapa *unit* lain dari paket komponen SQLdb untuk kegunaan dan manfaat yg berbeda, misalnya `db.pas`, namun itu tidak dibutuhkan dalam program kita ini.
-
-![](http://wiki.freepascal.org/images/8/82/sqldbcomponents.png)
-
-> **INFO:** Selain SQLite, SQLdb juga menyediakan komponen untuk koneksi ke berbagai jenis sistem *database* seperti yg ditunjukan dalam gambar palet SQLdb di atas. Misalnya ke MS SQL, mySQL, MariaDB, Firebird, PostgreSQL, Oracle, atau ODBC, dan lain sebagainya.
-
 ### Membuka Koneksi Database
 
-Hal pertama dalam olah data adalah tentu saja membuka koneksi ke sistem *database* yg digunakan. Untuk melakukan itu, perhatikan fungsi `openDB()` yg dimulai pada baris [21][22]. Kodenya adalah sebagai berikut:
+Hal pertama dalam olah data adalah tentu saja membuka koneksi ke sistem *database* yg akan digunakan. Untuk melakukan itu, perhatikan fungsi `openDB()` yg dimulai pada baris [21][22]. Kodenya adalah sebagai berikut:
 
 ```pascal
 function openDB(const dbName: string): boolean;
@@ -112,7 +112,7 @@ begin
 end;
 ```
 
-Sebelum bisa menggunakan komponen, kita harus membuat obyek dari *class*-nya terlebih dahulu. Itu yg dilakukan dalam blok komentar `//create component` yg berisi pembuatan obyek `sqlite3`, `dbTrans`, `dbQuery`, dan `slNames` yg deklarasi variabelnya ada pada blok `var` di baris nomor [8][23]. `slNames` adalah sebuah `TStringList` untuk menampung daftar nama yg nanti akan kita butuhkan.
+Sebelum bisa menggunakan komponen, kita harus membuat obyek dari *class*-nya terlebih dahulu. Itu yg dilakukan dalam blok komentar `// create components` yg berisi pembuatan obyek `sqlite3`, `dbTrans`, `dbQuery`, dan `slNames` yg deklarasi variabelnya ada pada blok `var` di baris nomor [8][23]. `slNames` adalah sebuah `TStringList` untuk menampung daftar nama yg nanti akan kita butuhkan.
 
 Selanjutnya adalah mengatur properti-properti penting di tiap obyek komponen tersebut. Itu dilakukan dalam blok komentar `//setup components` yg berisi pengaturan properti `Transaction` dan `Database` di obyek `sqlite3`, `dbTrans`, dan `dbQuery`. Perhatikan dengan baik bagaimana pengisian propertinya. Properti ketiga obyek tersebut harus saling terhubung dengan benar agar bisa saling bekerja sama.
 
@@ -120,9 +120,78 @@ Kemudian adalah mengatur properti koneksi database pada obyek `sqlite3` yg dilak
 
 Setelah semua obyek dibuat, dihubungkan, dan diatur dengan benar, maka kita bisa membuka koneksi ke *database* dengan menjalankan prosedur `Open` di obyek `sqlite3`. Itu dilakukan dalam blok komentar `// open db`. Menjalankan prosedur `Open` perlu dilakukan dalam pasangan `try...except` agar jika terjadi kegagalan bisa ditangani. Dalam hal ini jika ada kegagalan maka kita hanya menutup koneksi dan menampilkan pesan kesalahan yg diberikan oleh *database*.
 
-Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan berkas data dengan fungsi `FileExists()`. Ini perlu dilakukan karena berkas data SQLite bersifat lokal sehingga jika berkas data tidak ada maka kita bisa menampilkan pesan yg sesuai dan tidak perlu repot-repot membuka koneksi ke *database*. Selain itu juga karena SQLdb akan membuat berkas data baru jika berkas yg diminta tidak ditemukan. Pengecekan keberadaan berkas mencegah hal tersebut.
+Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan berkas data dengan fungsi `FileExists()`. Ini perlu dilakukan karena berkas data SQLite bersifat lokal sehingga jika berkas data tidak ada maka kita bisa menampilkan pesan yg sesuai dan tidak perlu repot-repot membuka koneksi ke *database*. Selain itu juga karena SQLdb akan membuat berkas data baru jika berkas yg diminta tidak ditemukan. Pengecekan keberadaan berkas data mencegah hal tersebut.
 
 Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi berasal dari status koneksi obyek `sqlite3` properti `Connected` yg dipadukan dengan kembalian fungsi `FileExists()`. Jika kembalian fungsi bernilai `true` maka koneksi ke *database* sukses, sebaliknya jika bernilai `false` maka koneksi gagal.
+
+### Menutup Koneksi Database
+
+Fungsi `openDB` tidak selalu berhasil melakukan koneksi ke *database*. Karena satu dan lain hal, kegagalan koneksi bisa saja terjadi. Seperti yg ditunjukkan dalam [bagian utama][25] program, ketika fungsi `openDB` gagal (mengembalikan nilai `false`), atau perulangan `repeat...until` selesai, maka program akan masuk ke bagian `finally` di mana ada pemanggilan prosedur `closeDB`. Mari kita perhatikan apa isi dari prosedur tersebut. 
+
+Prosedur `closeDB` dimulai pada baris nomor [60][24] dengan kode sebagai berikut:
+
+```pascal
+procedure closeDB;
+begin
+  // disconnect
+  if sqlite3.Connected then
+  begin
+    dbTrans.Commit;
+    dbQuery.Close;
+    sqlite3.Close;
+  end;
+
+  // release
+  slNames.Free;
+  dbQuery.Free;
+  dbTrans.Free;
+  sqlite3.Free;
+end;
+```
+
+Cukup singkat saja. Ada 2 hal yg dilakukan dalam prosedur `closeDB`, yaitu pertama adalah memutuskan koneksi ke *database* jika koneksi sedang aktif (yg ditunjukkan oleh properti `Connected` di obyek `sqlite3`). Pemutusan dilakukan dengan menjalankan prosedur `Close` pada obyek `dbQuery` dan `sqlite3`. Namun sebelum itu, dilakukan perintah `Commit` pada obyek `dbTrans` untuk menyimpan segala perubahan data yg telah terjadi ke *database*.
+
+Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`.
+
+### Menampilkan Daftar Tabel
+
+Apabila koneksi ke *database* berhasil, program menampilkan daftar tabel yg ada dalam berkas data yg dibuka. Ini dilakukan oleh prosedur `showTables`. Prosedur `showTables` dimulai pada baris nomor [77][26] dengan kode sebagai berikut:
+
+```pascal
+procedure showTables(const clear: boolean = true);
+var
+  i,j: integer;
+begin
+  if clear then ClrScr;
+
+  // get and print list of tables
+  sqlite3.GetTableNames(slNames,false);
+  if slNames.Count > 0 then
+  begin
+    writeln('> "',sqlite3.DatabaseName,'" has ',slNames.Count,' table(s):');
+
+    j := 0;
+    for i := 0 to slNames.Count-1 do
+      // fix included system tables bug
+      if LowerCase(Copy(slNames[i],1,7)) <> 'sqlite_' then
+      begin
+        j := j+1;
+        writeln(j,'. ',slNames[i]);
+      end;
+    writeln('Found ',j,' data table(s).');
+  end
+  else
+    writeln('> "',sqlite3.DatabaseName,'" has no tables.');
+end;
+```
+
+Yg pertama dilakukan adalah membersihkan layar jika diperlukan berdasarkan parameter `clear`. Kemudian mengambil daftar nama tabel data dengan memanggil prosedur `GetTableNames` dari obyek `sqlite3`. Prosedur tersebut mengembalikan daftar melalui parameter pertama bertipe `TStringList` di mana kita sudah siapkan variabel `slNames` untuk menampungnya. Parameter kedua bertipe `boolean` untuk kondisi penyertaan daftar tabel sistem (bersifat internal dan tersembunyi). Kita berikan nilai `false` ke parameter kedua yg artinya program tidak butuh daftar tabel sistem.
+
+Selanjutnya, program melihat apakah berkas data yg kita buka memiliki tabel atau tidak, dengan cara mengecek jumlah baris melalui properti `Count` di obyek `slNames`. Jika memiliki tabel (properti `Count` bernilai lebih dari 0) maka program menampilkan informasi jumlah tabel, diikuti tampilan daftar nama tabel yg ditampung dalam obyek `slNames` dengan perulangan `for...do`.
+
+Namun rupanya ada sedikit kesalahan (*bug*) dalam komponen `TSQLite3Connection` karena prosedur `GetTableNames` dengan parameter kedua bernilai `false` masih mengembalikan sebagian tabel sistem. Dalam kasus ini, seharusnya mengembalikan 11 tabel data, ternyata mengembalikan 13 tabel di mana 2 di antaranya adalah tabel sistem. Kesalahan ini terekam dalam video demo program di bawah dan baru saya sadari setelah menontonnya. Kesalahan ini harus kita benahi.
+
+SQLite menamai tabel sistemnya dengan awalan `sqlite_`. Maka untuk menyembunyikan tabel sistem yg terikut dalam daftar `slNames` cukup mudah, yaitu dengan mengecek apakah awalan nama tabel adalah `sqlite_`. Blok seleksi `if...then` dalam perulangan `for...do` di atas yg melakukan itu. Lalu kita tambahkan informasi berapa jumlah tabel data yg sebenarnya. Dengan pengecekan itu maka jumlah tabel data yg tampil pun sesuai dengan berkas data yg digunakan, yaitu 11 tabel.
 
 ### Menjalankan Perintah SQL
 
@@ -132,9 +201,9 @@ Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi be
 
 
 
+.
 
-
-
+... *this is a work in progress*
 
 _____
 [1]: https://www.embarcadero.com/products/delphi/starter/
@@ -160,3 +229,6 @@ _____
 [21]: http://wiki.freepascal.org/TSQLite3Connection
 [22]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L21
 [23]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L8
+[24]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L60
+[25]: #bagian-utama
+[26]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L77
