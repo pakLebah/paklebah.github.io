@@ -389,13 +389,13 @@ Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg tela
 
 ## Demo Program
 
-Berikut demo program lengkap dalam bentuk video (.gif) yg direkam saat dijalankan dari VS Code.
+Berikut demo program `chinook.lpr` dalam bentuk video (.gif) yg direkam saat dijalankan dari VS Code.
 
 ![](https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add/raw/f6005b6a27caa0ade96abed1310c951921d56d0b/z_chinook.gif)
 
 ## Kesimpulan
 
-Dari penjelasan di atas, cukup jelas bahwa menulis program *database* tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit panjang, tapi alurnya jelas dan mudah. Tentu contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
+Dari penjelasan di atas, cukup jelas bahwa menulis program *database* tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
 
 Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web. Semula contoh program ini akan saya buat sebagai aplikasi web, dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg sebenarnya tidak terkait dengan olah data, maka saya urungkan rencana itu dan jadikan sebagai aplikasi *console* saja.
 
