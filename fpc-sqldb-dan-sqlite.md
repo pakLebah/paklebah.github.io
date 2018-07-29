@@ -125,35 +125,6 @@ Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan 
 
 Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi berasal dari status koneksi obyek `sqlite3` properti `Connected` yg dipadukan dengan kembalian fungsi `FileExists()`. Jika kembalian fungsi bernilai `true` maka koneksi ke *database* sukses, sebaliknya jika bernilai `false` maka koneksi gagal.
 
-### Menutup Koneksi Database
-
-Fungsi `openDB` tidak selalu berhasil melakukan koneksi ke *database*. Karena satu dan lain hal, kegagalan koneksi bisa saja terjadi. Seperti yg ditunjukkan dalam [bagian utama][25] program, ketika fungsi `openDB` gagal (mengembalikan nilai `false`), atau perulangan `repeat...until` selesai, maka program akan masuk ke bagian `finally` di mana ada pemanggilan prosedur `closeDB`. Mari kita perhatikan apa isi dari prosedur tersebut. 
-
-Prosedur `closeDB` dimulai pada baris nomor [60][24] dengan kode sebagai berikut:
-
-```pascal
-procedure closeDB;
-begin
-  // disconnect
-  if sqlite3.Connected then
-  begin
-    dbTrans.Commit;
-    dbQuery.Close;
-    sqlite3.Close;
-  end;
-
-  // release
-  slNames.Free;
-  dbQuery.Free;
-  dbTrans.Free;
-  sqlite3.Free;
-end;
-```
-
-Cukup singkat saja. Ada 2 hal yg dilakukan dalam prosedur `closeDB`, yaitu pertama adalah memutuskan koneksi ke *database* jika koneksi sedang aktif (yg ditunjukkan oleh properti `Connected` di obyek `sqlite3`). Pemutusan dilakukan dengan menjalankan prosedur `Close` pada obyek `dbQuery` dan `sqlite3`. Namun sebelum itu, dilakukan perintah `Commit` pada obyek `dbTrans` untuk menyimpan segala perubahan data yg telah terjadi ke *database*.
-
-Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`. Dalam RAD, pelepasan sumber daya ini juga dilakukan otomatis oleh "pemilik" (*owner*) komponen, yg biasanya adalah *form* tempat komponen berada. Namun kali ini harus kita lakukan manual karena tidak ada "pemilik" komponen.
-
 ### Menampilkan Daftar Tabel
 
 Apabila koneksi ke *database* berhasil, program menampilkan daftar tabel yg ada dalam berkas data yg dibuka. Ini dilakukan oleh prosedur `showTables`. Prosedur `showTables` dimulai pada baris nomor [77][26] dengan kode sebagai berikut:
@@ -340,9 +311,9 @@ Jika perintah SQL ternyata gagal maka ini ditangkap oleh blok `except` yg melaku
 
 #### Menampilkan Struktur Tabel
 
-Sebenarnya SQLdb menyediakan beberapa prosedur untuk mengambil info struktur tabel, misalnya prosedur `GetTableNames` dan `GetFieldNames` di atas. Namun itu hanya mengembalikan namanya saja, tidak termasuk tipe data kolom dan info-info lainnya. Untungnya, SQLite menyediakan fitur membaca struktur tabel melalui perintah SQL. Mari kita gunakan fitur tersebut.
+SQLdb telah menyediakan beberapa prosedur untuk mengambil info struktur tabel, misalnya prosedur `GetTableNames` dan `GetFieldNames` di atas. Namun itu hanya mengembalikan namanya saja, tidak termasuk tipe data kolom dan info-info lainnya. Untungnya, SQLite menyediakan fitur membaca struktur tabel melalui perintah SQL. Mari kita gunakan fitur tersebut.
 
-Menampilkan info struktur tabel dilakukan oleh prosedur `showSchema` yg dimulai pada baris nomor [167][30] dengan kode sebagai berikut:
+Menampilkan info struktur tabel dilakukan dengan perintah `schema` diikuti nama tabel. Perintah itu ditangani oleh prosedur `showSchema` yg dimulai pada baris nomor [167][30] dengan kode sebagai berikut:
 
 ```pascal
 procedure showSchema(const sql: string);
@@ -350,19 +321,19 @@ var
   i,p: integer;
   t: string;
 begin
-  // check for table name in second parameter
+  // check table name
   p := Pos(' ',sql);
   if p = 0 then writeln('ERROR: Schema requires a table name.');
   if p = 0 then exit;
 
-  // check for table existence
+  // check table existence
   sqlite3.GetTableNames(slNames,false);
   t := LowerCase(Copy(sql, p+1, Length(sql)-p));
   p := slNames.IndexOf(t);
   if p = -1 then writeln('ERROR: Table "',t,'" is not found.');
   if p = -1 then exit;
 
-  // read table schema using query
+  // read table schema
   try
     ClrScr;
     writeln('> Schema of "',t,'"');
@@ -381,11 +352,46 @@ begin
 end;
 ```
 
+Karena perintah `schema` membutuhkan nama tabel, hal pertama yg dicek adalah parameter kedua. Jika tidak disertakan nama tabel maka perintah dihentikan. Ini dilakukan dalam blok komentar `// check table name`. Selanjutnya adalah mengecek keberadaan tabel yg diminta dalam daftar nama tabel. Jika tabel yg diminta tidak ditemukan maka perintah dihentikan. Ini dilakukan dalam blok komentar `// check table existence`.
 
+Jika tabel dipastikan ada dan tersedia maka dilakukan pembacaan struktur tabel dengan perintah SQL `select` ke tabel sistem bernama `sqlite_master`. Caranya sama dengan cara [mengambil data][31] di atas. Bedanya tidak perlu dilakukan perulangan karena data yg dikembalikan *database* bisa dipastikan hanya 1 baris saja.
 
-.
+Setelah menjalankan perintah SQL dari pengguna, program kembali menungggu perintah SQL selanjutnya. Demikian seterusnya hingga pengguna memberikan perintah `quit` atau `exit` untuk menghentikan program. Jika perintah tersebut diterima maka program memanggil prosedur `closeDB` dan program berakhir.
 
-... *this is a work in progress*
+### Menutup Koneksi Database
+
+Fungsi `openDB` tidak selalu berhasil melakukan koneksi ke *database*. Karena satu dan lain hal, kegagalan koneksi bisa saja terjadi. Seperti yg ditunjukkan dalam [bagian utama][25] program, ketika fungsi `openDB` gagal (mengembalikan nilai `false`), atau perulangan `repeat...until` selesai, maka program akan masuk ke bagian `finally` di mana ada pemanggilan prosedur `closeDB`. Mari kita perhatikan apa isi dari prosedur tersebut. 
+
+Prosedur `closeDB` dimulai pada baris nomor [60][24] dengan kode sebagai berikut:
+
+```pascal
+procedure closeDB;
+begin
+  // disconnect
+  if sqlite3.Connected then
+  begin
+    dbTrans.Commit;
+    dbQuery.Close;
+    sqlite3.Close;
+  end;
+
+  // release
+  slNames.Free;
+  dbQuery.Free;
+  dbTrans.Free;
+  sqlite3.Free;
+end;
+```
+
+Cukup singkat saja. Ada 2 hal yg dilakukan dalam prosedur `closeDB`, yaitu pertama adalah memutuskan koneksi ke *database* jika koneksi sedang aktif (yg ditunjukkan oleh properti `Connected` di obyek `sqlite3`). Pemutusan dilakukan dengan menjalankan prosedur `Close` pada obyek `dbQuery` dan `sqlite3`. Namun sebelum itu, dilakukan perintah `Commit` pada obyek `dbTrans` untuk menyimpan segala perubahan data yg telah terjadi ke *database*.
+
+Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`. Dalam RAD, pelepasan sumber daya ini juga dilakukan otomatis oleh "pemilik" (*owner*) komponen, yg biasanya adalah *form* tempat komponen berada. Namun kali ini harus kita lakukan manual karena tidak ada "pemilik" komponen.
+
+## Kesimpulan
+
+Dari penjelasan di atas, cukup jelas bahwa menulis program *database* tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit panjang, tapi alurnya jelas dan mudah. Tentu contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
+
+Demikian. Semoga bermanfaat.
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/4).  
@@ -424,3 +430,4 @@ Thank you. 😊
 [28]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L127
 [29]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L103
 [30]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L167
+[31]: #mengambil-data
