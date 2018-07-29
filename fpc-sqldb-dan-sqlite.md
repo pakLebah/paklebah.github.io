@@ -43,7 +43,7 @@ Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-kom
 
 ![](http://wiki.freepascal.org/images/8/82/sqldbcomponents.png)
 
-> **INFO:** Selain SQLite, SQLdb juga menyediakan komponen untuk koneksi ke berbagai jenis sistem *database* seperti yg ditunjukan dalam gambar palet SQLdb di atas. Misalnya ke MS SQL, mySQL, MariaDB, Firebird, PostgreSQL, Oracle, atau ODBC, dan lain sebagainya.
+> **INFO:** Selain SQLite, SQLdb juga menyediakan komponen untuk koneksi ke berbagai jenis sistem *database* seperti yg ditunjukan dalam gambar palet SQLdb di atas. Misalnya ke mySQL (atau MariaDB), Firebird, PostgreSQL, Oracle, MS SQL (melalui ODBC), dan lain sebagainya.
 
 ### Bagian Utama
 
@@ -302,7 +302,7 @@ Setelah tabel, program menampilkan info ringkasan tabel berupa jumlah baris data
 
 #### Mengubah Data
 
-Jika perintah dari pengguna bukan dari 5 perintah yg sudah ditentukan di atas, maka program menganggap itu adalah perintah untuk mengubah data. Program menjalankan prosedur `execQuery` dengan parameter `sql` bertipe `string`. Prosedur `execQuery` dimulai dari baris nomor [103][29] dengan kode sebagai berikut:
+Jika perintah dari pengguna bukan 5 perintah yg sudah ditentukan di atas, maka program menganggap itu adalah perintah untuk mengubah data. Program menjalankan prosedur `execQuery` dengan parameter `sql` bertipe `string`. Prosedur `execQuery` dimulai dari baris nomor [103][29] dengan kode sebagai berikut:
 
 ```pascal
 procedure execQuery(const sql: string);
@@ -339,6 +339,47 @@ Jika perintah SQL berhasil dijalankan maka properti `RowsAffected` di obyek `dbQ
 Jika perintah SQL ternyata gagal maka ini ditangkap oleh blok `except` yg melakukan pembatalan perubahan data dengan memanggil prosedur `Rollback` di obyek `dbTrans`. Kemudian menampilkan pesan kesalahan ke pengguna.
 
 #### Menampilkan Struktur Tabel
+
+Sebenarnya SQLdb menyediakan beberapa prosedur untuk mengambil info struktur tabel, misalnya prosedur `GetTableNames` dan `GetFieldNames` di atas. Namun itu hanya mengembalikan namanya saja, tidak termasuk tipe data kolom dan info-info lainnya. Untungnya, SQLite menyediakan fitur membaca struktur tabel melalui perintah SQL. Mari kita gunakan fitur tersebut.
+
+Menampilkan info struktur tabel dilakukan oleh prosedur `showSchema` yg dimulai pada baris nomor [167][30] dengan kode sebagai berikut:
+
+```pascal
+procedure showSchema(const sql: string);
+var
+  i,p: integer;
+  t: string;
+begin
+  // check for table name in second parameter
+  p := Pos(' ',sql);
+  if p = 0 then writeln('ERROR: Schema requires a table name.');
+  if p = 0 then exit;
+
+  // check for table existence
+  sqlite3.GetTableNames(slNames,false);
+  t := LowerCase(Copy(sql, p+1, Length(sql)-p));
+  p := slNames.IndexOf(t);
+  if p = -1 then writeln('ERROR: Table "',t,'" is not found.');
+  if p = -1 then exit;
+
+  // read table schema using query
+  try
+    ClrScr;
+    writeln('> Schema of "',t,'"');
+
+    // schema command
+    dbQuery.SQL.Text := 'select name, sql from sqlite_master '+
+                        'where type="table" and name="'+t+'"';
+    dbQuery.Open;
+
+    // fetch schema
+    writeln(dbQuery.Fields.Fields[1].AsString);
+    dbQuery.Close;
+  except
+    on E: Exception do writeln(sqlDBError(E.Message));
+  end;
+end;
+```
 
 
 
@@ -382,3 +423,4 @@ Thank you. 😊
 [27]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L202
 [28]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L127
 [29]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L103
+[30]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L167
