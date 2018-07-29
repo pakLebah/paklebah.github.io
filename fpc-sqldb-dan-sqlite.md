@@ -1,7 +1,5 @@
 # Free Pascal, SQLdb, dan SQLite
 
----
-
 ### Daftar Isi
 
 * Pendahuluan
