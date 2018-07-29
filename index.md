@@ -2,6 +2,9 @@
 
 > *"I'm not writing computer program, I'm writing digital poetry." ~Mr Bee*
 
+#### July, 2018:
+* [Free Pascal, SQLdb, dan SQLite](fpc-sqldb-dan-sqlite.md)
+
 #### May, 2018:
 * [Free Pascal dan VS Code](fpc-dan-vscode.md)
 * [Named Parameter for Pascal](namedparameter.md)
