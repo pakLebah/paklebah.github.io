@@ -1,5 +1,28 @@
 # Free Pascal, SQLdb, dan SQLite
 
+
+## Daftar Isi
+
+* Pendahuluan
+   * [Kelemahan RAD](#kelemahan-rad)
+   * [SQLdb dan SQLite](#sqldb-dan-sqlite)
+* [Contoh Data](#contoh-data)
+* [Contoh Program](#contoh-program)
+   * [Unit Yg Dibutuhkan](#unit-yg-dibutuhkan)
+   * [Bagian Utama](#bagian-utama)
+   * [Membuka Koneksi Database](#membuka-koneksi-database)
+   * [Menampilkan Daftar Tabel](#menampilkan-daftar-tabel)
+      * [Kesalahan Kecil Dalam TSQLite3Connection](#kesalahan-kecil-dalam-tsqlite3connection)
+   * [Menjalankan Perintah SQL](#menjalankan-perintah-sql)
+      * [Mengambil Data](#mengambil-data)
+      * [Mengubah Data](#mengubah-data)
+      * [Menampilkan Struktur Tabel](#menampilkan-struktur-tabel)
+   * [Menutup Koneksi Database](#menutup-koneksi-database)
+* [Demo Program](#demo-program)
+* [Kesimpulan](#kesimpulan)
+
+---
+
 Kemampuan RAD (*Rapid Application Development*) bahasa Pascal –tepatnya [Delphi][1] atau [Lazarus][2]– dikenal sangat memudahkan dalam pembuatan aplikasi *database*. Namun ternyata banyak juga pemrogram Pascal yg masih kesulitan membuat program *database* dengan Pascal tanpa bantuan RAD. Beberapa rekan pemrogram Pascal di komunitas [Pascal Indonesia][16] masih sering bertanya bagaimana membuat aplikasi *database* jika tidak menggunakan fitur RAD di Delphi atau Lazarus.
 
 #### Kelemahan RAD
