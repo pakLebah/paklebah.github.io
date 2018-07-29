@@ -64,13 +64,13 @@ begin
 end.
 ```
 
-Cukup singkat, jelas, dan mudah dimengerti, bukan? Bagian utama program berisi pasangan `try...finally` yg mencoba membuka berkas data `chinook.db` sebagai parameter pada pemanggilan fungsi `openDB()`, menampilkan tabel melalui prosedur `showTables()`, dan perulangan `repeat...until` yg menjalankan *query* melalui prosedur `runQuery` hingga selesai yg ditunjukkan oleh peubah `quit`. Sebelum program berakhir, pastikan *database* ditutup melalui prosedur `closeDB()`.
+Cukup singkat, jelas, dan mudah dimengerti, bukan? Bagian utama program berisi pasangan `try...finally` yg mencoba membuka berkas data `chinook.db` sebagai parameter pada pemanggilan fungsi `openDB`, menampilkan tabel melalui prosedur `showTables`, dan perulangan `repeat...until` yg menjalankan *query* melalui prosedur `runQuery` hingga selesai yg ditunjukkan oleh peubah `quit`. Sebelum program berakhir, pastikan *database* ditutup melalui prosedur `closeDB`.
 
 > **CATATAN:** Kita asumsikan berkas data `chinook.db` berada dalam *folder* yg sama dengan program sehingga cukup disebut nama berkasnya saja. Namun jika berbeda lokasi, sertakan tujuan (*path*) berkas dengan benar. 
 
 ### Membuka Koneksi Database
 
-Hal pertama dalam olah data adalah tentu saja membuka koneksi ke sistem *database* yg akan digunakan. Untuk melakukan itu, perhatikan fungsi `openDB()` yg dimulai pada baris [21][22]. Kodenya adalah sebagai berikut:
+Hal pertama dalam olah data adalah tentu saja membuka koneksi ke sistem *database* yg akan digunakan. Untuk melakukan itu, perhatikan fungsi `openDB` yg dimulai pada baris [21][22]. Kodenya adalah sebagai berikut:
 
 ```pascal
 function openDB(const dbName: string): boolean;
@@ -121,9 +121,9 @@ Kemudian adalah mengatur properti koneksi database pada obyek `sqlite3` yg dilak
 
 Setelah semua obyek dibuat, dihubungkan, dan diatur dengan benar, maka kita bisa membuka koneksi ke *database* dengan menjalankan prosedur `Open` di obyek `sqlite3`. Itu dilakukan dalam blok komentar `// open db`. Menjalankan prosedur `Open` perlu dilakukan dalam pasangan `try...except` agar jika terjadi kegagalan bisa ditangani. Dalam hal ini jika ada kegagalan maka kita hanya menutup koneksi dan menampilkan pesan kesalahan yg diberikan oleh *database*.
 
-Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan berkas data dengan fungsi `FileExists()`. Ini perlu dilakukan karena berkas data SQLite bersifat lokal sehingga jika berkas data tidak ada maka kita bisa menampilkan pesan yg sesuai dan tidak perlu repot-repot membuka koneksi ke *database*. Selain itu juga karena SQLdb akan membuat berkas data baru jika berkas yg diminta tidak ditemukan. Pengecekan keberadaan berkas data mencegah hal tersebut.
+Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan berkas data dengan fungsi `FileExists`. Ini perlu dilakukan karena berkas data SQLite bersifat lokal sehingga jika berkas data tidak ada maka kita bisa menampilkan pesan yg sesuai dan tidak perlu repot-repot membuka koneksi ke *database*. Selain itu juga karena SQLdb akan membuat berkas data baru jika berkas yg diminta tidak ditemukan. Pengecekan keberadaan berkas data mencegah hal tersebut.
 
-Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi berasal dari status koneksi obyek `sqlite3` properti `Connected` yg dipadukan dengan kembalian fungsi `FileExists()`. Jika kembalian fungsi bernilai `true` maka koneksi ke *database* sukses, sebaliknya jika bernilai `false` maka koneksi gagal.
+Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi berasal dari status koneksi obyek `sqlite3` properti `Connected` yg dipadukan dengan kembalian fungsi `FileExists`. Jika kembalian fungsi bernilai `true` maka koneksi ke *database* sukses, sebaliknya jika bernilai `false` maka koneksi gagal.
 
 ### Menampilkan Daftar Tabel
 
@@ -333,7 +333,7 @@ begin
   if p = -1 then writeln('ERROR: Table "',t,'" is not found.');
   if p = -1 then exit;
 
-  // read table schema
+  // fetch table schema
   try
     ClrScr;
     writeln('> Schema of "',t,'"');
@@ -343,7 +343,7 @@ begin
                         'where type="table" and name="'+t+'"';
     dbQuery.Open;
 
-    // fetch schema
+    // print schema
     writeln(dbQuery.Fields.Fields[1].AsString);
     dbQuery.Close;
   except
@@ -389,15 +389,15 @@ Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg tela
 
 ## Demo Program
 
-Berikut demo program `chinook.lpr` dalam bentuk video (.gif) yg direkam saat dijalankan dari VS Code.
+Berikut demo program `chinook.lpr` dalam bentuk video (`.gif`) yg direkam saat dijalankan dari VS Code.
 
 ![](https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add/raw/f6005b6a27caa0ade96abed1310c951921d56d0b/z_chinook.gif)
 
 ## Kesimpulan
 
-Dari penjelasan di atas, cukup jelas bahwa menulis program *database* tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
+Dari uraian di atas, cukup jelas bahwa menulis program *database* secara "manual" tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit lebih panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan perintah SQL yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
 
-Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web. Semula contoh program ini akan saya buat sebagai aplikasi web, dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg sebenarnya tidak terkait dengan olah data, maka saya urungkan rencana itu dan jadikan sebagai aplikasi *console* saja.
+Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web atau non-GUI lainnya. Semula contoh program ini akan saya buat sebagai aplikasi web dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg sebenarnya tidak terkait dengan olah data, maka saya urungkan rencana itu dan jadikan sebagai aplikasi *console* saja.
 
 Demikian. Semoga bermanfaat.
 
