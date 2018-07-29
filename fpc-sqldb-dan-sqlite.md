@@ -31,6 +31,7 @@ Contoh program hanya terdiri dari 1 berkas saja bernama `chinook.lpr`. Saya nama
 ### Unit Yg Dibutuhkan
 
 Pemrograman *database* dengan SQLdb dan SQLite membutuhkan setidaknya 2 *unit*, yaitu:
+
 - *unit* `sqldb.pas` berisi komponen-komponen berikut:
   - [`TSQLConnection`][18] untuk koneksi ke sistem *database*.
   - [`TSQLTransaction`][19] untuk manajemen transaksi data.
@@ -151,7 +152,7 @@ end;
 
 Cukup singkat saja. Ada 2 hal yg dilakukan dalam prosedur `closeDB`, yaitu pertama adalah memutuskan koneksi ke *database* jika koneksi sedang aktif (yg ditunjukkan oleh properti `Connected` di obyek `sqlite3`). Pemutusan dilakukan dengan menjalankan prosedur `Close` pada obyek `dbQuery` dan `sqlite3`. Namun sebelum itu, dilakukan perintah `Commit` pada obyek `dbTrans` untuk menyimpan segala perubahan data yg telah terjadi ke *database*.
 
-Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`.
+Selanjutnya adalah melepas sumber daya yg digunakan obyek-obyek komponen yg telah dibuat sebelumnya. Caranya dengan memanggil prosedur `Free` pada obyek `slNames`, `dbQuery`, `dbTrans`, dan `sqlite3`. Dalam RAD, pelepasan sumber daya ini juga dilakukan otomatis oleh "pemilik" (*owner*) komponen, yg biasanya adalah *form* tempat komponen berada. Namun kali ini harus kita lakukan manual karena tidak ada "pemilik" komponen.
 
 ### Menampilkan Daftar Tabel
 
@@ -185,19 +186,159 @@ begin
 end;
 ```
 
-Yg pertama dilakukan adalah membersihkan layar jika diperlukan berdasarkan parameter `clear`. Kemudian mengambil daftar nama tabel data dengan memanggil prosedur `GetTableNames` dari obyek `sqlite3`. Prosedur tersebut mengembalikan daftar melalui parameter pertama bertipe `TStringList` di mana kita sudah siapkan variabel `slNames` untuk menampungnya. Parameter kedua bertipe `boolean` untuk kondisi penyertaan daftar tabel sistem (bersifat internal dan tersembunyi). Kita berikan nilai `false` ke parameter kedua yg artinya program tidak butuh daftar tabel sistem.
+Yg pertama dilakukan adalah membersihkan layar jika diperlukan, berdasarkan parameter `clear`. Kemudian mengambil daftar nama tabel data dengan memanggil prosedur `GetTableNames` dari obyek `sqlite3`. Prosedur tersebut mengembalikan daftar tabel melalui parameter pertama bertipe `TStringList` di mana kita sudah siapkan variabel `slNames` untuk menampungnya. Parameter kedua bertipe `boolean` untuk kondisi penyertaan tabel sistem (bersifat internal dan tersembunyi). Kita berikan nilai `false` ke parameter kedua yg artinya program tidak butuh tabel sistem disertakan dalam daftar.
 
 Selanjutnya, program melihat apakah berkas data yg kita buka memiliki tabel atau tidak, dengan cara mengecek jumlah baris melalui properti `Count` di obyek `slNames`. Jika memiliki tabel (properti `Count` bernilai lebih dari 0) maka program menampilkan informasi jumlah tabel, diikuti tampilan daftar nama tabel yg ditampung dalam obyek `slNames` dengan perulangan `for...do`.
 
+#### Kesalahan Kecil Dalam TSQLite3Connection
+
 Namun rupanya ada sedikit kesalahan (*bug*) dalam komponen `TSQLite3Connection` karena prosedur `GetTableNames` dengan parameter kedua bernilai `false` masih mengembalikan sebagian tabel sistem. Dalam kasus ini, seharusnya mengembalikan 11 tabel data, ternyata mengembalikan 13 tabel di mana 2 di antaranya adalah tabel sistem. Kesalahan ini terekam dalam video demo program di bawah dan baru saya sadari setelah menontonnya. Kesalahan ini harus kita benahi.
 
-SQLite menamai tabel sistemnya dengan awalan `sqlite_`. Maka untuk menyembunyikan tabel sistem yg terikut dalam daftar `slNames` cukup mudah, yaitu dengan mengecek apakah awalan nama tabel adalah `sqlite_`. Blok seleksi `if...then` dalam perulangan `for...do` di atas yg melakukan itu. Lalu kita tambahkan informasi berapa jumlah tabel data yg sebenarnya. Dengan pengecekan itu maka jumlah tabel data yg tampil pun sesuai dengan berkas data yg digunakan, yaitu 11 tabel.
+SQLite menamai tabel sistemnya dengan awalan `sqlite_`. Maka untuk menyembunyikan tabel sistem yg terikut dalam daftar `slNames` cukup mudah, yaitu dengan hanya menampilkan tabel yg namanya tidak berawalan `sqlite_` (7 huruf pertama). Blok seleksi `if...then` dalam perulangan `for...do` di atas yg melakukan itu. Lalu kita tambahkan informasi berapa jumlah tabel data yg sebenarnya. Dengan pengecekan itu maka jumlah tabel data yg tampil pun sesuai dengan berkas data, yaitu 11 tabel.
 
 ### Menjalankan Perintah SQL
 
+Kini program siap menerima perintah SQL dari masukan pengguna. Ini dilakukan oleh prosedur `runQuery` yg berada di baris [202][27], yg kodenya sebagai berikut:
 
+```pascal
+procedure runQuery;
+var
+  p: integer;
+  q,s: string;
+begin
+  if sqlite3.Connected then
+  begin
+    // query input
+    writeln('_____');
+    writeln('Enter SQL query:');
+    write('» ');
+    readln(q);
+    q := Trim(q);
 
+    // filter input to process custom commands
+    if q <> '' then
+    begin
+      // read first word
+      p := Pos(' ',q);
+      if p = 0 then p := Length(q) else p := p-1;
+      s := LowerCase(Copy(q,1,p));
 
+      // run query
+      if (s = 'quit') or (s = 'exit') then quit := true
+      else if (s = 'clear') and (p = Length(q)) then ClrScr
+      else if (s = 'tables') and (p = Length(q)) then showTables
+      else if (s = 'schema') then showSchema(q)
+      else if s = 'select' then openQuery(q)
+      else execQuery(q);
+    end;
+  end;
+end;
+```
+
+Prosedur `runQuery` selalu mengecek apakah program masih tersambung ke *database* melalui properti `Connected` dari obyek `sqlite3` karena tidak mungkin menjalankan perintah SQL jika program terputus dari *database*. Selanjutnya menampilkan *prompt* untuk menerima masukan dari pengguna. Masukan pengguna ditampung sebagai `string` dalam variabel `q`. Ini dilakukan dalam blok komentar `// query input`.
+
+Jika ada masukan dari pengguna, yaitu `q` tidak berupa `string` kosong, maka program menguji jenis perintah apa yg diberikan pengguna lalu memanggil perintah yg sesuai. Jenis perintah ditentukan dari kata pertama dalam kalimat perintah. Pengambilan kata pertama dilakukan dalam blok komentar `// read first word`. Pengujian ini diperlukan karena program kita tidak hanya menerima perintah SQL tapi juga beberapa perintah khusus yg tidak disediakan SQLite, yaitu:
+
+- `quit` atau `exit` untuk menghentikan program.
+- `clear` untuk membersihkan layar.
+- `tables` untuk menampilkan daftar tabel data.
+- `schema <table>` untuk menampilkan struktur tabel.
+
+Perintah SQL perlu dibedakan juga karena SQLdb punya perintah yg berbeda untuk membaca data dan mengubah data. Perintah SQL untuk membaca data umumnya adalah `select`, maka itu harus kita deteksi dalam masukan pengguna. Perintah SQL selain `select` kita anggap perintah untuk mengubah data. Pengujian jenis perintah dilakukan dalam blok komentar `// run query`.
+
+#### Mengambil Data
+
+Jika kata pertama masukan pengguna adalah `select` maka program akan memanggil prosedur `openQuery` dengan parameter `sql` bertipe `string`. Prosedur `openQuery` bekerja dengan obyek `dbQuery` yg dimulai dari baris [127][28] dengan kode sebagai berikut:
+
+```pascal
+procedure openQuery(const sql: string);
+var
+  i: integer;
+begin
+  try
+    // fetch data
+    dbQuery.SQL.Text := sql;
+    dbQuery.Open;
+
+    if dbQuery.Active then
+    begin
+      ClrScr;
+      writeln('> Fetching: "',sql,'"');
+
+      // get and print headers
+      dbQuery.GetFieldNames(slNames);
+      for i := 0 to slNames.Count-1 do write('| ',UpperCase(slNames[i]),' ');
+      writeln;
+
+      // iterate rows
+      while not dbQuery.EOF do
+      begin
+        // print cell by column
+        for i := 0 to dbQuery.FieldCount-1 do
+          write('| ',dbQuery.Fields.Fields[i].AsString,' ');
+        writeln;
+
+        dbQuery.Next;
+      end;
+
+      // print summary
+      writeln('Found ',dbQuery.RecordCount,' record(s).');
+    end;
+
+    dbQuery.Close;
+  except
+    on E: Exception do writeln(sqlDBError(E.Message));
+  end;
+end;
+```
+
+Masukan dari pengguna tidak bisa dijamin selalu benar, oleh karena itu perintah SQL yg diberikan pengguna harus dijalankan dalam pasangan `try...except` untuk menangkap kesalahan yg terjadi dan menampilkan pesan kesalahan dari *database*. Kemudian program memberikan perintah SQL dari parameter `sql` ke properti `SQL.Text`, lalu menjalankan prosedur `Open`. Ini dilakukan dalam blok komentar `// fetch data`.
+
+Jika prosedur `Open` sukses, ditunjukkan dengan properti `Active` bernilai `true`, maka program akan menampilkan tabel data. Diawali dengan menampilkan daftar nama kolom tabel, yg dilakukan dalam blok komentar `// get and print headers`, yaitu dengan menjalankan prosedur `GetFieldNames` yg kembaliannya ditampung dalam `slNames`. Kemudian perulangan `for...do` untuk menampilkan daftar nama kolom sebagai baris pertama.
+
+Selanjutnya program melakukan perulangan untuk mengambil setiap baris data yg ada, dari baris pertama hingga baris terakhir. Caranya adalah perulangan `while...do` dengan mengecek akhir baris melalui properti `EOF` (*end of file*). Tampilkan data pada setiap baris dengan perulangan `for..do` untuk membaca data di tiap kolomnya. Jumlah kolom ada di properti `FieldCount` dan indeks kolom dimulai dari `0`. Jangan lupa memanggil prosedur `Next` di akhir perulangan `while...do` agar perulangan tidak tertahan (*stuck*) di baris pertama.
+
+Setelah tabel, program menampilkan info ringkasan tabel berupa jumlah baris data yg diterima. Jumlah baris data ada di properti `RecordCount`. Dan terakhir adalah menutup perintah SQL dengan memanggil prosedur `Close`. Selesailah rangkaian proses menampilkan data dari perintah `select`.
+
+#### Mengubah Data
+
+Jika perintah dari pengguna bukan dari 5 perintah yg sudah ditentukan di atas, maka program menganggap itu adalah perintah untuk mengubah data. Program menjalankan prosedur `execQuery` dengan parameter `sql` bertipe `string`. Prosedur `execQuery` dimulai dari baris nomor [103][29] dengan kode sebagai berikut:
+
+```pascal
+procedure execQuery(const sql: string);
+begin
+  try
+    // execute command
+    dbQuery.SQL.Text := sql;
+    dbTrans.Active := true;
+    dbQuery.ExecSQL;
+
+    // print info
+    writeln('> Executing: "',sql,'"');
+    writeln('Affected ',dbQuery.RowsAffected,' record(s).');
+
+    // commit changes
+    dbTrans.Commit;
+  except
+    on E: Exception do
+    begin
+      // rollback changes
+      dbTrans.Rollback;
+      writeln(sqlDBError(E.Message));
+    end;
+  end;
+end;
+```
+
+Mengubah data harus dilakukan dalam transaksi agar jika ada kesalahan data bisa dibatalkan. Dalam SQLdb, transaksi data ditangani oleh *class* `TSQLTransaction` yg dalam program ini berupa obyek `dbTrans`. Sebagaimana prosedur `runQuery`, prosedur `execQuery` juga dilakukan dalam pasangan `try...except` untuk menangkap kesalahan perintah dari pengguna.
+
+Prosedur `execQuery` dimulai dengan memberikan perintah SQL dari parameter `sql` ke properti `SQL.Text` di obyek `dbQuery`. Lalu memulai transaksi dengan memberikan nilai `true` pada properti `Active` di obyek `dbTrans`. Kemudian menjalankan prosedur `ExecSQL` di obyek `dbQuery`. Ini yg dilakukan dalam blok komentar `// execute command`.
+
+Jika perintah SQL berhasil dijalankan maka properti `RowsAffected` di obyek `dbQuery` akan berisi jumlah baris data yg berubah akibat perintah tersebut. Info ini kita tampilkan ke pengguna. Kemudian pastikan perubahan data tersimpan ke berkas data dengan memanggil prosedur `Commit` di obyek `dbTrans`.
+
+Jika perintah SQL ternyata gagal maka ini ditangkap oleh blok `except` yg melakukan pembatalan perubahan data dengan memanggil prosedur `Rollback` di obyek `dbTrans`. Kemudian menampilkan pesan kesalahan ke pengguna.
+
+#### Menampilkan Struktur Tabel
 
 
 
@@ -205,7 +346,13 @@ SQLite menamai tabel sistemnya dengan awalan `sqlite_`. Maka untuk menyembunyika
 
 ... *this is a work in progress*
 
-_____
+———  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/4).  
+Thank you. 😊
+
+---
+<span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
+
 [1]: https://www.embarcadero.com/products/delphi/starter/
 [2]: http://www.lazarus-ide.org
 [3]: https://www.freepascal.org
@@ -232,3 +379,6 @@ _____
 [24]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L60
 [25]: #bagian-utama
 [26]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L77
+[27]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L202
+[28]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L127
+[29]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L103
