@@ -220,7 +220,7 @@ begin
       if (s = 'quit') or (s = 'exit') then quit := true
       else if (s = 'clear') and (p = Length(q)) then ClrScr
       else if (s = 'tables') and (p = Length(q)) then showTables
-      else if (s = 'schema') then showSchema(q)
+      else if s = 'schema' then showSchema(q)
       else if s = 'select' then openQuery(q)
       else execQuery(q);
     end;
