@@ -1,6 +1,6 @@
 # Free Pascal, SQLdb, dan SQLite
 
-Kemampuan RAD (*Rapid Application Development*) bahasa Pascal –tepatnya [Delphi][1] atau [Lazarus][2]– dikenal sangat mudah untuk membuat aplikasi *database*. Namun ternyata banyak juga pemrogram Pascal yg masih kesulitan membuat program *database* dengan Pascal tanpa bantuan RAD. Beberapa rekan pemrogram Pascal di komunitas [Pascal Indonesia][16] masih sering bertanya bagaimana membuat aplikasi *database* jika tidak menggunakan fitur RAD di Delphi atau Lazarus.
+Kemampuan RAD (*Rapid Application Development*) bahasa Pascal –tepatnya [Delphi][1] atau [Lazarus][2]– dikenal sangat memudahkan dalam pembuatan aplikasi *database*. Namun ternyata banyak juga pemrogram Pascal yg masih kesulitan membuat program *database* dengan Pascal tanpa bantuan RAD. Beberapa rekan pemrogram Pascal di komunitas [Pascal Indonesia][16] masih sering bertanya bagaimana membuat aplikasi *database* jika tidak menggunakan fitur RAD di Delphi atau Lazarus.
 
 #### Kelemahan RAD
 
@@ -47,21 +47,94 @@ begin
 end.
 ```
 
-Cukup singkat, jelas, dan mudah dimengerti, bukan? Bagian utama program berisi pasangan `try...finally` yg mencoba membuka berkas *database* `chinook.db` melalui fungsi `openDB()`, menampilkan tabel melalui prosedur `showTables()`, dan perulangan yg menjalan *query* melalui prosedur `runQuery` hingga selesai. Sebelum program berakhir, pastikan *database* ditutup melalui prosedur `closeDB()`.
+Cukup singkat, jelas, dan mudah dimengerti, bukan? Bagian utama program berisi pasangan `try...finally` yg mencoba membuka berkas data `chinook.db` sebagai parameter pada pemanggilan fungsi `openDB()`, menampilkan tabel melalui prosedur `showTables()`, dan perulangan `repeat...until` yg menjalankan *query* melalui prosedur `runQuery` hingga selesai yg ditunjukkan oleh peubah `quit`. Sebelum program berakhir, pastikan *database* ditutup melalui prosedur `closeDB()`.
+
+> **CATATAN:** Kita asumsikan berkas data `chinook.db` berada dalam *folder* yg sama dengan program sehingga cukup disebut nama berkasnya saja. Namun jika berbeda lokasi, sertakan tujuan (*path*) berkas dengan benar. 
 
 ### Komponen Yg Dibutuhkan
 
 Pemrograman *database* dengan SQLdb dan SQLite membutuhkan setidaknya 2 *unit*, yaitu:
 - *unit* `sqldb.pas` berisi komponen-komponen berikut:
-  - `TSQLConnection` untuk koneksi ke sistem *database*.
-  - `TSQLTransaction` untuk manajemen transaksi data.
-  - `TSQLQuery` untuk menjalankan perintah SQL.
+  - [`TSQLConnection`][18] untuk koneksi ke sistem *database*.
+  - [`TSQLTransaction`][19] untuk manajemen transaksi data.
+  - [`TSQLQuery`][20] untuk menjalankan perintah SQL.
 - *unit* `sqlite3conn.pas` berisi komponen berikut:
-  - `TSQLite3Connection` untuk akses data ke berkas SQLite.
+  - [`TSQLite3Connection`][21] untuk akses data ke berkas SQLite. *Class* ini adalah turunan dari *class* `TSQLConnection` dengan implementasi khusus untuk SQLite (versi 3).
 
-Pastikan kedua unit itu harus kita tambahkan di baris [`uses`][17] di program Pascal kita. Masih ada beberapa *unit* lain dari paket komponen SQLdb untuk kegunaan yg berbeda, namun itu tidak dibutuhkan dalam program kita ini. Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-komponen visual SQLdb ke *form* dari palet SQLdb.
+Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-komponen visual SQLdb dari palet SQLdb ke *form*. Namun kali ini kita harus menambahkan sendiri di blok [`uses`][17] di program Pascal kita. Masih ada beberapa *unit* lain dari paket komponen SQLdb untuk kegunaan dan manfaat yg berbeda, misalnya `db.pas`, namun itu tidak dibutuhkan dalam program kita ini.
 
 ![](http://wiki.freepascal.org/images/8/82/sqldbcomponents.png)
+
+> **INFO:** Selain SQLite, SQLdb juga menyediakan komponen untuk koneksi ke berbagai jenis sistem *database* seperti yg ditunjukan dalam gambar palet SQLdb di atas. Misalnya ke MS SQL, mySQL, MariaDB, Firebird, PostgreSQL, Oracle, atau ODBC, dan lain sebagainya.
+
+### Membuka Koneksi Database
+
+Hal pertama dalam olah data adalah tentu saja membuka koneksi ke sistem *database* yg digunakan. Untuk melakukan itu, perhatikan fungsi `openDB()` yg dimulai pada baris [21][22]. Kodenya adalah sebagai berikut:
+
+```pascal
+function openDB(const dbName: string): boolean;
+begin
+  // create components
+  sqlite3 := TSQLite3Connection.Create(nil);
+  dbTrans := TSQLTransaction.Create(nil);
+  dbQuery := TSQLQuery.Create(nil);
+  slNames := TStringList.Create;
+
+  // setup components
+  sqlite3.Transaction   := dbTrans;
+  dbTrans.Database      := sqlite3;
+  dbQuery.Transaction   := dbTrans;
+  dbQuery.Database      := sqlite3;
+  slNames.CaseSensitive := false;
+
+  // setup db
+  sqlite3.DatabaseName := dbName;
+  sqlite3.HostName     := 'localhost';
+  sqlite3.CharSet      := 'UTF8';
+
+  // open db
+  if FileExists(dbName) then
+  try
+    sqlite3.Open;
+    result := sqlite3.Connected;
+  except
+    on E: Exception do
+    begin
+      sqlite3.Close;
+      writeln(sqlDBError(E.Message));
+    end;
+  end
+  else
+  begin
+    result := false;
+    writeln('Database file "',dbName,'" is not found.');
+  end;
+end;
+```
+
+Sebelum bisa menggunakan komponen, kita harus membuat obyek dari *class*-nya terlebih dahulu. Itu yg dilakukan dalam blok komentar `//create component` yg berisi pembuatan obyek `sqlite3`, `dbTrans`, `dbQuery`, dan `slNames` yg deklarasi variabelnya ada pada blok `var` di baris nomor [8][23]. `slNames` adalah sebuah `TStringList` untuk menampung daftar nama yg nanti akan kita butuhkan.
+
+Selanjutnya adalah mengatur properti-properti penting di tiap obyek komponen tersebut. Itu dilakukan dalam blok komentar `//setup components` yg berisi pengaturan properti `Transaction` dan `Database` di obyek `sqlite3`, `dbTrans`, dan `dbQuery`. Perhatikan dengan baik bagaimana pengisian propertinya. Properti ketiga obyek tersebut harus saling terhubung dengan benar agar bisa saling bekerja sama.
+
+Kemudian adalah mengatur properti koneksi database pada obyek `sqlite3` yg dilakukan dalam blok komentar `// setup db`. Properti `DatabaseName` berisi tujuan (*path*) lengkap ke berkas data, nilainya diambil dari parameter `dbName`. Properti `HostName` diisi `localhost` karena SQLite bekerja lokal (tanpa *server*). Properti `CharSet` diisi `UTF8` karena itu adalah *encoding* yg paling umum digunakan. Perlu diingat bahwa ini adalah pengaturan untuk SQLite, yg belum tentu sama pada sistem *database* yg lain. Sistem *database* yg berbeda bisa jadi membutuhkan pengaturan properti yg berbeda pula.
+
+Setelah semua obyek dibuat, dihubungkan, dan diatur dengan benar, maka kita bisa membuka koneksi ke *database* dengan menjalankan prosedur `Open` di obyek `sqlite3`. Itu dilakukan dalam blok komentar `// open db`. Menjalankan prosedur `Open` perlu dilakukan dalam pasangan `try...except` agar jika terjadi kegagalan bisa ditangani. Dalam hal ini jika ada kegagalan maka kita hanya menutup koneksi dan menampilkan pesan kesalahan yg diberikan oleh *database*.
+
+Namun dalam program di atas, pasangan `try...except` dilakukan dalam pengecekan berkas data dengan fungsi `FileExists()`. Ini perlu dilakukan karena berkas data SQLite bersifat lokal sehingga jika berkas data tidak ada maka kita bisa menampilkan pesan yg sesuai dan tidak perlu repot-repot membuka koneksi ke *database*. Selain itu juga karena SQLdb akan membuat berkas data baru jika berkas yg diminta tidak ditemukan. Pengecekan keberadaan berkas mencegah hal tersebut.
+
+Fungsi `openDB` mengembalikan nilai bertipe `boolean`. Nilai kembalian fungsi berasal dari status koneksi obyek `sqlite3` properti `Connected` yg dipadukan dengan kembalian fungsi `FileExists()`. Jika kembalian fungsi bernilai `true` maka koneksi ke *database* sukses, sebaliknya jika bernilai `false` maka koneksi gagal.
+
+### Menjalankan Perintah SQL
+
+
+
+
+
+
+
+
+
+
 
 _____
 [1]: https://www.embarcadero.com/products/delphi/starter/
@@ -81,3 +154,9 @@ _____
 [15]: http://www.sqlitetutorial.net/sqlite-sample-database/
 [16]: http://facebook.com/groups/Pascal.ID
 [17]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L5
+[18]: https://www.freepascal.org/docs-html/fcl/sqldb/tsqlconnection.html
+[19]: https://www.freepascal.org/docs-html/fcl/sqldb/tsqltransaction.html
+[20]: https://www.freepascal.org/docs-html/fcl/sqldb/tsqlquery.html
+[21]: http://wiki.freepascal.org/TSQLite3Connection
+[22]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L21
+[23]: https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add#file-chinook-lpr-L8
