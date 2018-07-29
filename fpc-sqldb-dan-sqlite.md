@@ -1,7 +1,8 @@
 # Free Pascal, SQLdb, dan SQLite
 
+---
 
-## Daftar Isi
+### Daftar Isi
 
 * Pendahuluan
    * [Kelemahan RAD](#kelemahan-rad)
