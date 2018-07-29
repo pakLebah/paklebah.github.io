@@ -417,7 +417,7 @@ Berikut demo program `chinook.lpr` dalam bentuk video (`.gif`) yg direkam saat d
 
 ## Kesimpulan
 
-Dari uraian di atas, cukup jelas bahwa menulis program *database* secara "manual" tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit lebih panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan penanganan yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
+Dari uraian di atas, cukup jelas bahwa menulis program *database* secara "manual" tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit lebih panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan penanganan yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, secara umum mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
 
 Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web atau non-GUI lainnya. Semula contoh program ini akan saya buat sebagai aplikasi web dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg sebenarnya tidak terkait dengan olah data, maka saya urungkan rencana itu dan jadikan sebagai aplikasi *console* saja.
 
