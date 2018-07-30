@@ -69,7 +69,7 @@ Di Lazarus, penambahan unit dilakukan otomatis jika kita meletakkan komponen-kom
 
 ### Bagian Utama
 
-Selanjutnya kita mari bahas dari bagian utama program. Silakan lompat ke baris nomor [235][13], kode yg kita perhatikan adalah sebagai berikut:
+Selanjutnya mari kita bahas mulai dari bagian utama program. Silakan lompat ke baris nomor [235][13], kode yg kita lihat adalah sebagai berikut:
 
 ```pascal
 //# main program
@@ -323,7 +323,7 @@ begin
 end;
 ```
 
-Mengubah data harus dilakukan dalam transaksi agar jika ada kesalahan data bisa dibatalkan. Dalam SQLdb, transaksi data ditangani oleh *class* `TSQLTransaction` yg dalam program ini berupa obyek `dbTrans`. Sebagaimana prosedur `runQuery`, prosedur `execQuery` juga dilakukan dalam pasangan `try...except` untuk menangkap kesalahan perintah dari pengguna.
+Mengubah data harus dilakukan dalam transaksi agar jika ada kesalahan data bisa dibatalkan. Dalam SQLdb, transaksi data ditangani oleh *class* `TSQLTransaction` yg dalam program ini berupa obyek `dbTrans`. Sebagaimana prosedur `runQuery`, kode dalam prosedur `execQuery` juga dilakukan dalam pasangan `try...except` untuk menangkap kesalahan perintah dari pengguna.
 
 Prosedur `execQuery` dimulai dengan memberikan perintah SQL dari parameter `sql` ke properti `SQL.Text` di obyek `dbQuery`. Lalu memulai transaksi dengan memberikan nilai `true` pada properti `Active` di obyek `dbTrans`. Kemudian menjalankan prosedur `ExecSQL` di obyek `dbQuery`. Ini yg dilakukan dalam blok komentar `// execute command`.
 
@@ -415,11 +415,13 @@ Berikut demo program `chinook.lpr` dalam bentuk video (`.gif`) yg direkam saat d
 
 ![](https://gist.github.com/pakLebah/277e0875a9ff50b9186fa9e166667add/raw/f6005b6a27caa0ade96abed1310c951921d56d0b/z_chinook.gif)
 
+> **CATATAN:** Video di atas direkam saat kesalahan `TSQLite3Connection` belum dibenahi sehingga jumlah tabel yg muncul masih berjumlah 13. Kode program yg tersedia di *gist* telah membenahi kesalahan tersebut.
+
 ## Kesimpulan
 
 Dari uraian di atas, cukup jelas bahwa menulis program *database* secara "manual" tidak semudah *drag-n-drop* di RAD, tapi juga tidak sulit. Mungkin kodenya agak sedikit lebih panjang, tapi alurnya jelas dan mudah. Contoh program ini saya buat sesederhana mungkin dengan operasi dasar yg umum digunakan agar lebih mudah dipahami. Untuk operasi olah data dengan penanganan yg lebih rumit, silakan pelajari dari tautan-tautan yg disertakan. Namun demikian, secara umum mekanisme dasarnya tidak jauh berbeda dengan yg saya jelaskan di sini.
 
-Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web atau non-GUI lainnya. Semula contoh program ini akan saya buat sebagai aplikasi web dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg sebenarnya tidak terkait dengan olah data, maka saya urungkan rencana itu dan jadikan sebagai aplikasi *console* saja.
+Contoh program ini masih sangat bisa dikembangkan lebih jauh atau ditambah fitur-fitur lain yg lebih menarik. Tekniknya juga bisa diterapkan dalam aplikasi web atau non-GUI lainnya. Semula contoh program ini akan saya buat sebagai aplikasi web dengan menggunakan *unit* [WebCRT][32]. Namun agar pembaca tidak terganggu dengan kode-kode web yg tidak terkait dengan olah data, maka saya urungkan rencana itu dan menjadikannya sebagai aplikasi *console* saja.
 
 Bila pembaca menemukan kesalahan atau kekurangan dalam contoh program atau tulisan ini, dengan senang hati saya menerima segala saran, kritik, dan masukan dari Anda semua melalui kolom komentar. Terima kasih.
 
