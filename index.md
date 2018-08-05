@@ -3,6 +3,7 @@
 > *"I'm not writing computer program, I'm writing digital poetry." ~Mr Bee*
 
 #### July, 2018:
+* [Bernostalgia Dengan Kode ANSI](nostalgia-dengan-kode-ansi.md)
 * [Free Pascal, SQLdb, dan SQLite](fpc-sqldb-dan-sqlite.md)
 
 #### May, 2018:
