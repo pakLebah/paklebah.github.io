@@ -4,7 +4,7 @@ Beberapa hari yg lalu, saat jalan-jalan di dunia maya melalui blog (*blogwalking
 
 Gara-gara artikel itu, saya jadi ingin bernostalgia membuat aplikasi *console* yg warna-warni. Jika dulu saya membuatnya dengan Turbo Pascal dan teknik [*interrupt* 10H][7], kini saya akan membuatnya dengan Free Pascal dan kode ANSI. Tentu saja menggunakan aplikasi penyunting [VS Code][8] di MacBook Pro kesayangan saya. Saya rencanakan gagasan tersebut sebagai proyek *ngoprek* di akhir pekan kali ini.
 
-Kode ANSI sebenarnya bukan hal yg baru, usianya bahkan lebih tua dari DOS. Namun standar pengolahan tampilan teks tersebut masih tetap berlaku di sistem operasi modern hingga hari ini, termasuk [Windows 10][9] (walaupun perlu diaktifkan terlebih dahulu). Sementara teknik *interrupt* 10H sudah tidak didukung lagi di sistem operasi modern karena membutuhkan akses langsung ke perangkat keras.
+Kode ANSI sebenarnya bukan hal yg baru, usianya bahkan lebih tua dari DOS. Namun standar pengolahan tampilan teks tersebut masih tetap berlaku di berbagai sistem operasi modern hingga hari ini, termasuk [Windows 10][9] (walaupun perlu diaktifkan terlebih dahulu). Sementara teknik *interrupt* 10H sudah tidak didukung lagi di sistem operasi modern karena membutuhkan akses langsung ke perangkat keras.
 
 Setelah beberapa jam *ngoprek* program sambil membaca standar kode ANSI dari berbagai sumber, akhirnya sebuah *unit* bernama [`ansiCRT.pas`][18] dan sebuah program demo pun saya buat. Kode program sumber saya simpan di *gist* di [sini][10]. Bagi yg berminat, silakan dipelajari. Tampilan programnya sebagai berikut:
 
