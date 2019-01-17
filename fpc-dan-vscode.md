@@ -98,7 +98,7 @@ Dalam `tasks.json` tersebut ada 5 perintah yg saya sediakan, yaitu:
 Sebagai tambahan, anda juga bisa menambahkan perintah untuk mempercantik kode program Pascal dengan memasang [Jedi Code Formatter][38] versi CLI (*Command Line Interface*) di VS Code. Untuk petunjuk lebih lanjut, silakan baca laman JCF-CLI di [sini][39]. Atau anda juga bisa mencoba versi daringnya di [sini][40].
 
 > **Catatan**:
-> Berkas `tasks.json` terbaru sudah berkembang sedemikian rupa dengan beberapa tambahan fitur baru dan pengaturan yg lebih fleksibel. Pastikan anda memahami fitur baru dan pengaturan yg tersedia sebelum menggunakannya. Jika ada kendala, silakan gunakan berkas `tasks.json` yg paling awal dengan memilih versi (*revision*) berkas di Gist.
+> Berkas `tasks.json` terbaru sudah berkembang sedemikian rupa dengan beberapa tambahan fitur baru dan pengaturan yg lebih fleksibel. Pastikan anda memahami fitur baru dan pengaturan yg tersedia sebelum menggunakannya. Jika ada kendala, silakan gunakan berkas `tasks.json` yg paling awal di [sini][41], atau dengan memilih [versi][42] (*revision*) yg sesuai.
 
 ## Pengaturan Awakutu
 
@@ -207,3 +207,5 @@ Thank you. 😊
 [38]: http://jedicodeformat.sourceforge.net/
 [39]: https://github.com/git-bee/jcf-cli
 [40]: https://pak.lebah.web.id/jcf
+[41]: https://gist.github.com/pakLebah/dab98067e9a388a3a8d2f5c0b44a7d3f/27cea616e1b011b99acaf0306c4c881a0f54fcc4
+[42]: https://gist.github.com/pakLebah/dab98067e9a388a3a8d2f5c0b44a7d3f/revisions
