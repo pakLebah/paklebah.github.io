@@ -97,6 +97,9 @@ Dalam `tasks.json` tersebut ada 5 perintah yg saya sediakan, yaitu:
 
 Sebagai tambahan, anda juga bisa menambahkan perintah untuk mempercantik kode program Pascal dengan memasang [Jedi Code Formatter][38] versi CLI (*Command Line Interface*) di VS Code. Untuk petunjuk lebih lanjut, silakan baca laman JCF-CLI di [sini][39]. Atau anda juga bisa mencoba versi daringnya di [sini][40].
 
+> **Catatan**:
+> Berkas `tasks.json` terbaru sudah berkembang sedemikian rupa dengan beberapa tambahan fitur baru dan pengaturan yg lebih fleksibel. Pastikan anda memahami fitur baru dan pengaturan yg tersedia sebelum menggunakannya. Jika ada kendala, silakan gunakan berkas `tasks.json` yg paling awal dengan memilih versi (*revision*) berkas di Gist.
+
 ## Pengaturan Awakutu
 
 Sebelum kita lanjut ke tahap selanjutnya, saya anggap anda sudah memasang awakutu di komputer anda, baik itu [GDB][30] maupun [LLDB][31]. Saya sarankan anda menggunakan GDB saja karena *compiler* Free Pascal lebih sesuai dengan GDB daripada LLDB. Pengguna Linux bisa memasang baik LLDB atau GDB dengan mudah melalui perintah `apt-get` (distro Debian dan turunannya, termasuk [Ubuntu][32]) atau `yum` (Distro RedHat dan turunannya, seperti [Fedora][33]). Sedang untuk pengguna Mac, cukup memasang aplikasi [XCode][34] dari Apple yg sudah termasuk LLDB juga.
