@@ -37,11 +37,38 @@ Ini adalah kesalahan akibat jalan keluar masalah yg diambil kurang tepat untuk m
 
 ## AWAKUTU
 
-Awakutu (*debug*) adalah proses pencarian kesalahan dalam kode program dan memperbaikinya. Biasanya awakutu dilakukan dengan menggunakan alat bantu pemrograman yg disebut dengan *debugger*. Proses pencarian kesalahan disebut *debug* atau *debugging* (awakutu), alat bantunya disebut *debugger*, dan kesalahannya disebut *bug* (kutu). Awakutu berkaitan dengan proses pencarian kesalahan algoritma dalam kode program. Awakutu adalah salah satu kemampuan dasar bagi pemrogram. Jika pemrogram tidak punya kemampuan awakutu maka tidak layak dia disebut pemrogram.
+Awakutu (*debug*) adalah proses pencarian kesalahan dalam kode program dan memperbaikinya. Biasanya awakutu dilakukan dengan menggunakan alat bantu pemrograman yg disebut dengan *debugger*. Proses pencarian kesalahan disebut *debug* atau *debugging* (awakutu), alat bantunya disebut *debugger*, dan kesalahannya disebut *bug* (kutu). Awakutu berkaitan dengan proses pencarian kesalahan algoritma dalam kode program. Awakutu adalah salah satu kemampuan dasar bagi pemrogram. Jika pemrogram tidak punya kemampuan awakutu maka tidak layak disebut pemrogram.
 
 Namun manfaat awakutu sebenarnya tidak hanya untuk mencari kesalahan algoritma saja. Awakutu juga penting sebagai metode untuk memahami jalannya program. *Debugger* memungkinkan pemrogram untuk menjalankan kode program baris-per-baris sehingga pemrogram bisa memahami alur kode program. Bagi pemrogram pemula atau yg sedang belajar, manfaat ini bisa jadi lebih penting karena bisa memberikan gambaran langsung bagaimana kode program bekerja selangkah demi selangkah.
 
+Ada banyak sekali jenis *debugger*. Ada *debugger* yg bersifat umum untuk berbagai jenis bahasa pemrograman dan kompilator serta sistem operasi, seperti [GNU Debugger][5] dan [LLDB][6]. Ada *debugger* yg bersifat khusus untuk sistem operasi tertentu, seperti [WinDebug][7]. Ada *debugger* yg khusus untuk bahasa pemrograman tertentu, seperti [xdebug][8] untuk bahasa PHP. Ada *debugger* bawaan dari IDE tertentu, seperti [Delphi][9]. Untuk pengguna [Free Pascal][10], hasil kompilasi Free Pascal bisa bekerja dengan *debugger* [gdb][5] atau [lldb][6].
 
+### Fasilitas *Debugger*
+
+Selain bisa menjalankan kode program baris-per-baris, *debugger* juga mempunyai banyak perintah untuk pencarian kutu dan menelusuri jalannya program. Beberapa perintah penting *debugger* antara lain:
+
+- **Titik sorot** (*cursor*) adalah titik (baris) di mana *debugger* sedang berada untuk menerima perintah awakutu selanjutnya.
+- **Titik henti** (*breakpoint*) adalah titik henti di mana *debugger* akan menghentikan jalannya program setiap kali kode program mencapai titik (baris) yg ditentukan.
+- **Titik henti bersyarat** (*conditional breakpoint*) adalah titik henti yg memiliki syarat di mana *debugger* akan menghentikan jalannya program di titik (baris) tersebut hanya jika syaratnya terpenuhi.
+- **Jalankan langkah** (*step over*) adalah perintah bagi *debugger* untuk menjalankan baris perintah di mana titik sorot sedang berada.
+- **Melangkah lebih dalam** (*step into*) adalah perintah bagi *debugger* untuk masuk ke kode program yg lebih dalam. Ini hanya berlaku jika baris kode program di titik sorot berupa panggilan subprogram (`procedure` atau `function` dalam Pascal).
+- **Melangkah ke luar** (*step out*) adalah perintah bagi *debugger* untuk menjalankan kode program hingga keluar dari lingkupnya ke lingkup yg lebih luar (keluar dari subprogram) atau hingga titik henti berikutnya.
+- **Ulangi** (*restart*) adalah perintah bagi *debugger* untuk mengulangi jalannya program dari awal lagi.
+- **Hentikan** (*stop*) adalah perintah bagi *debugger* untuk menghentikan jalannya program saat itu juga.
+
+Selain untuk menelusuri jalannya program, biasanya *debugger* juga menyertakan alat bantu lainnya seperti:
+
+- ***Console*** (*debug console*) adalah alat untuk berinteraksi dengan *debugger* yg aktif, misalnya untuk pengaturan atau proses awakutu secara manual.
+- **Pantauan** (*watch* atau *watch list*) adalah alat untuk memantau data yg ditampung variabel atau objek dalam kode program, berikut perubahan datanya selama program berjalan.
+- **Tumpukan panggilan** (*call stack* atau *stack trace*) adalah alat untuk menelusuri rincian kode perintah di balik kode program yg berjalan. Biasanya berisi perintah komputer yg terjadi di balik setiap kode program, misalnya pemanggilan perintah sistem seperti Windows API atau perintah mesin virtual.
+- **Catatan** (*log* atau *event log*) adalah alat untuk menampilkan berbagai jenis catatan baik yg dihasilkan oleh program maupun *debugger* sendiri atau program lain yg terkait.
+- **Utas** (*thread* atau *thread list*) adalah alat untuk menampilkan utas perintah yg bekerja ketika program sedang berjalan. Ini penting untuk awakutu pada aplikasi multi-utas (*multithread*).
+- ***Module*** (penampil subprogram luar) adalah alat untuk menampilkan subprogram luar yg terlibat, seperti berkas *.dll* atau *.so* atau *unit* dalam Pascal, ketika program sedang berjalan.
+- ***Disassembler*** (penampil kode *assembler*) adalah alat untuk menampilkan kode mesin dari kode program asal.
+- ***CPU*** adalah alat untuk menampilkan yg sedang terjadi di *processor* komputer saat program sedang berjalan.
+- ***Memory*** adalah alat untuk menampilkan yg sedang tersimpan di *memory* komputer saat program sedang berjalan.
+
+Bagi pemrogram pemula, yg penting dikuasai lebih dulu adalah perintah penelurusan dan alat bantu pantauan. Dengan memanfaatkan fasilitas tersebut, pemrogram bisa mengikuti alur program langkah demi langkah serta memantau isi setiap variabel atau obyek yg dibuat selama program sedang berjalan. Dengan demikian, pemrogram bisa betul-betul memahami apa yg sedang terjadi di setiap langkah dalam kode program yg disusunnya.
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/6).  
@@ -54,3 +81,9 @@ Thank you. 😊
 [2]: https://marketplace.visualstudio.com/items?itemName=Wosi.omnipascal
 [3]: https://code.visualstudio.com
 [4]: https://en.wikipedia.org/wiki/Lint_programming_tool
+[5]: https://www.gnu.org/software/gdb/
+[6]: https://lldb.llvm.org
+[7]: https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/
+[8]: https://xdebug.org
+[9]: https://embarcadero.com/products/delphi
+[10]: https://freepascal.org
