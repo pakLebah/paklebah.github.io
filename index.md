@@ -1,6 +1,9 @@
-[![](img/programming.png)](https://www.shutterstock.com/image-vector/programming-concept-illustration-signs-icons-on-631891025)
+[![header iamge](img/programming.png)](https://www.shutterstock.com/image-vector/programming-concept-illustration-signs-icons-on-631891025)
 
 > *"I'm not writing computer program, I'm writing digital poetry." ~Mr Bee*
+
+#### February, 2019:
+* [Mengenal Awakutu](mengenal-awakutu.md)
 
 #### July, 2018:
 * [Bernostalgia Dengan Kode ANSI](nostalgia-dengan-kode-ansi.md)
