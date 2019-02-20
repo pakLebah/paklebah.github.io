@@ -29,13 +29,18 @@ Ini adalah kesalahan akibat ketidak-mampuan pemrogram menerjemahkan solusi menja
 
 Misalnya, solusinya menyatakan data harus diurutkan dari kecil ke besar, tapi algoritma yg dibuat mengurutkan data dari besar ke kecil. Maka tentu saja hasil kode program tidak sesuai dengan solusi yg diinginkan.
 
-Kesalahan algoritma bisa terjadi secara tidak sengaja atau sengaja. Penyebabnya bisa jadi sepele tapi bisa jadi rumit juga. Kesalahan tidak sengaja misalnya seharusnya ditulis variabel `data1` tapi salah ketik menjadi `data2` atau salah baca menjadi `datal`. Penyebabnya tampak sepele tapi menemukan kesalahan itu dalam kode program belum tentu semudah penyebabnya. Kesalahan yg sengaja misalnya karena belum betul-betul paham solusinya tapi segera membuat program sehingga salah algoritmanya. Kesalahan jenis ini akan lebih sulit memperbaikinya, bahkan kadang kode program harus ditulis ulang lagi dari awal dengan algoritma yg benar.
+Kesalahan algoritma bisa terjadi secara tidak sengaja atau sengaja. Penyebabnya bisa jadi sepele tapi bisa jadi rumit juga. Kesalahan tidak sengaja misalnya seharusnya ditulis variabel `data1` tapi salah ketik menjadi `data2` atau salah baca menjadi `datal`. Penyebabnya tampak sepele tapi menemukan kesalahan itu dalam kode program belum tentu semudah penyebabnya. Kesalahan yg sengaja misalnya karena belum betul-betul paham solusinya tapi segera dibuat programnya sehingga salah algoritmanya. Kesalahan jenis ini akan lebih sulit lagi memperbaikinya, bahkan kadang kode program harus ditulis ulang dari awal dengan algoritma yg benar.
 
 ### 3. Kesalahan Solusi
 
-Ini adalah kesalahan akibat solusi yg diambil kurang tepat untuk menyelesaikan masalah. Tidak ada penyunting atau *linter* yg bisa membantu menyelesaikan masalah ini. Kesalahan ini terjadi bahkan sebelum kode program ditulis, maka solusinya adalah kembali lagi ke proses berpikir dan pencarian solusi masalah yg tepat. Jika solusi yg diambil bukan dari pemrogram (misalnya dari atasan pemrogram) maka harus dikembalikan lagi ke yg menentukan solusi tersebut.
+Ini adalah kesalahan akibat jalan keluar masalah yg diambil kurang tepat untuk menyelesaikan masalah. Tidak ada penyunting atau *linter* atau kompilator yg bisa membantu menyelesaikan kesalahan ini. Kesalahan ini terjadi bahkan sebelum kode program ditulis, maka solusinya adalah kembali lagi ke proses berpikir dan pencarian jalan keluar masalah yg tepat. Jika solusi yg diambil bukan dari pemrogram (misalnya dari atasan pemrogram) maka harus dikembalikan lagi ke yg menentukan solusi tersebut.
 
 ## AWAKUTU
+
+Awakutu (*debug*) adalah proses pencarian kesalahan dalam kode program dan memperbaikinya. Biasanya awakutu dilakukan dengan menggunakan alat bantu pemrograman yg disebut dengan *debugger*. Proses pencarian kesalahan disebut *debug* atau *debugging* (awakutu), alat bantunya disebut *debugger*, dan kesalahannya disebut *bug* (kutu). Awakutu berkaitan dengan proses pencarian kesalahan algoritma dalam kode program. Awakutu adalah salah satu kemampuan dasar bagi pemrogram. Jika pemrogram tidak punya kemampuan awakutu maka tidak layak dia disebut pemrogram.
+
+Namun manfaat awakutu sebenarnya tidak hanya untuk mencari kesalahan algoritma saja. Awakutu juga penting sebagai metode untuk memahami jalannya program. *Debugger* memungkinkan pemrogram untuk menjalankan kode program baris-per-baris sehingga pemrogram bisa memahami alur kode program. Bagi pemrogram pemula atau yg sedang belajar, manfaat ini bisa jadi lebih penting karena bisa memberikan gambaran langsung bagaimana kode program bekerja selangkah demi selangkah.
+
 
 
 ———  
