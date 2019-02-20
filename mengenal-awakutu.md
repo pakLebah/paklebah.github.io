@@ -13,13 +13,13 @@ Maka menjadi seorang pemrogram harus selalu siap menghadapi masalah dan menyeles
 
 ### 1. Kesalahan Penulisan
 
-Ini adalah kesalahan yg paling sering terjadi namun paling mudah diatasi. Kesalahan ini terjadi karena pemrogram kurang menguasai cara menyusun program yg benar sesuai bahasa (*syntax error*) atau alat (*build error*) pemrograman yg digunakan. Pemrogram yg kurang menguasai cara menyusun program biasanya karena kurang membaca tata bahasa dan tata kelola alat pemrograman yg digunakan. Pastikan kita sudah membaca panduan penyusunan program dari bahasa atau alat yg kita gunakan.
+Ini adalah kesalahan yg paling sering terjadi namun paling mudah diatasi. Kesalahan ini terjadi karena pemrogram kurang menguasai cara menyusun program yg benar sesuai bahasa (*syntax error*) atau alat (*build error*) pemrograman yg digunakan. Pemrogram yg kurang menguasai cara menyusun program biasanya karena kurang membaca tata bahasa dan tata kelola alat pemrograman yg digunakan. Setiap pemrogram harus sudah membaca panduan penyusunan program dari bahasa atau alat yg digunakan sebelum menulis sebaris kode program.
 
 Kesalahan ini paling mudah diatasi karena kompilator (*compiler*) akan memberikan pesan kesalahan yg cukup jelas. Misalnya kurang titik koma di baris sekian kolom sekian, atau kelebihan tanda kurung di baris sekian kolom sekian, ada variabel `x` yg tidak dikenali, dan lain-lain, yg biasanya dalam bahasa Inggris. Jika pemrogram tidak mampu memahami pesan kesalahan dan memperbaikinya, baik karena tidak paham penulisan program yg benar atau tidak paham bahasa Inggris, sebaiknya dia kembali ke titik nol lagi yaitu belajar dari awal cara menulis program sesuai bahasa pemrograman yg digunakan. Bila perlu sekalian juga belajar bahasa Inggris.
 
 Penyunting modern telah mampu menunjukkan kesalahan penulisan sebelum kompilator bekerja. Misalnya dengan menandai bagian yg salah dengan garis bawah merah bergerigi, seperti dalam aplikasi Microsoft Word. Penyunting modern juga mampu memberikan saran perbaikan untuk kesalahan penulisan yg umum terjadi. Pengguna tinggal setujui saran yg muncul maka penyunting akan memperbaiki kesalahan secara otomatis (*auto-fix*). Fasilitas demikian biasa disebut dengan *[linter][4]*. Gambar di bawah ini adalah contoh fasilitas *linter* yg disediakan oleh ekstensi [OmniPascal][2] di penyunting [VS Code][3].
 
-![](img/omnipascal_linter.png)
+![OmniPascal's linter](img/omnipascal_linter.png)
 
 ### 2. Kesalahan Algoritma
 
@@ -39,7 +39,7 @@ Ini adalah kesalahan akibat jalan keluar masalah yg diambil kurang tepat untuk m
 
 Awakutu (*debug*) adalah proses pencarian kesalahan dalam kode program dan memperbaikinya. Biasanya awakutu dilakukan dengan menggunakan alat bantu pemrograman yg disebut dengan *debugger*. Proses pencarian kesalahan disebut *debug* atau *debugging* (awakutu), alat bantunya disebut *debugger*, dan kesalahannya disebut *bug* (kutu). Awakutu berkaitan dengan proses pencarian kesalahan algoritma dalam kode program. Awakutu adalah salah satu kemampuan dasar bagi pemrogram. Jika pemrogram tidak punya kemampuan awakutu maka tidak layak disebut pemrogram.
 
-Namun manfaat awakutu sebenarnya tidak hanya untuk mencari kesalahan algoritma saja. Awakutu juga penting sebagai metode untuk memahami jalannya program. *Debugger* memungkinkan pemrogram untuk menjalankan kode program baris-per-baris sehingga pemrogram bisa memahami alur kode program. Bagi pemrogram pemula atau yg sedang belajar, manfaat ini bisa jadi lebih penting karena bisa memberikan gambaran langsung bagaimana kode program bekerja selangkah demi selangkah.
+Namun manfaat awakutu sebenarnya tidak hanya untuk mencari kesalahan algoritma saja. Awakutu juga penting sebagai metode untuk memahami alur jalannya program. *Debugger* memungkinkan pemrogram untuk menjalankan kode program baris-per-baris sehingga pemrogram bisa memahami alur kode program yg dibuatnya. Bagi pemrogram pemula atau yg sedang belajar, manfaat ini bisa jadi lebih penting karena bisa memberikan gambaran langsung bagaimana kode programnya bekerja selangkah demi selangkah.
 
 Ada banyak sekali jenis *debugger*. Ada *debugger* yg bersifat umum untuk berbagai jenis bahasa pemrograman dan kompilator serta sistem operasi, seperti [GNU Debugger][5] dan [LLDB][6]. Ada *debugger* yg bersifat khusus untuk sistem operasi tertentu, seperti [WinDebug][7]. Ada *debugger* yg khusus untuk bahasa pemrograman tertentu, seperti [xdebug][8] untuk bahasa PHP. Ada *debugger* bawaan dari IDE tertentu, seperti [Delphi][9]. Untuk pengguna [Free Pascal][10], hasil kompilasi Free Pascal bisa bekerja dengan *debugger* [gdb][5] atau [lldb][6].
 
@@ -47,11 +47,12 @@ Ada banyak sekali jenis *debugger*. Ada *debugger* yg bersifat umum untuk berbag
 
 Selain bisa menjalankan kode program baris-per-baris, *debugger* juga mempunyai banyak perintah untuk pencarian kutu dan menelusuri jalannya program. Beberapa perintah penting *debugger* antara lain:
 
-- **Titik sorot** (*cursor*) adalah titik (baris) di mana *debugger* sedang berada untuk menerima perintah awakutu selanjutnya.
-- **Titik henti** (*breakpoint*) adalah titik henti di mana *debugger* akan menghentikan jalannya program setiap kali kode program mencapai titik (baris) yg ditentukan.
+- **Titik sorot** (*cursor*) adalah titik (baris) di mana *debugger* sedang berada untuk menerima perintah awakutu selanjutnya. Biasanya diwarnai berbeda di penyunting.
+- **Titik henti** (*breakpoint*) adalah titik henti di mana *debugger* akan menghentikan jalannya program setiap kali program mencapai titik (baris) yg ditentukan.
 - **Titik henti bersyarat** (*conditional breakpoint*) adalah titik henti yg memiliki syarat di mana *debugger* akan menghentikan jalannya program di titik (baris) tersebut hanya jika syaratnya terpenuhi.
-- **Jalankan langkah** (*step over*) adalah perintah bagi *debugger* untuk menjalankan baris perintah di mana titik sorot sedang berada.
-- **Melangkah lebih dalam** (*step into*) adalah perintah bagi *debugger* untuk masuk ke kode program yg lebih dalam. Ini hanya berlaku jika baris kode program di titik sorot berupa panggilan subprogram (`procedure` atau `function` dalam Pascal).
+- **Jalankan program** (*run* atau *continue*) adalah perintah bagi *debugger* untuk menjalankan seluruh kode program dari awal atau dari titik sorot hingga mencapai titik henti atau titik henti bersyarat.
+- **Jalankan langkah** (*step over*) adalah perintah bagi *debugger* untuk menjalankan hanya satu baris perintah di mana titik sorot sedang berada.
+- **Melangkah ke dalam** (*step into*) adalah perintah bagi *debugger* untuk masuk ke kode program yg lebih dalam. Ini hanya berlaku jika baris kode program di titik sorot berupa panggilan subprogram (`procedure` atau `function` dalam Pascal).
 - **Melangkah ke luar** (*step out*) adalah perintah bagi *debugger* untuk menjalankan kode program hingga keluar dari lingkupnya ke lingkup yg lebih luar (keluar dari subprogram) atau hingga titik henti berikutnya.
 - **Ulangi** (*restart*) adalah perintah bagi *debugger* untuk mengulangi jalannya program dari awal lagi.
 - **Hentikan** (*stop*) adalah perintah bagi *debugger* untuk menghentikan jalannya program saat itu juga.
@@ -60,15 +61,21 @@ Selain untuk menelusuri jalannya program, biasanya *debugger* juga menyertakan a
 
 - ***Console*** (*debug console*) adalah alat untuk berinteraksi dengan *debugger* yg aktif, misalnya untuk pengaturan atau proses awakutu secara manual.
 - **Pantauan** (*watch* atau *watch list*) adalah alat untuk memantau data yg ditampung variabel atau objek dalam kode program, berikut perubahan datanya selama program berjalan.
-- **Tumpukan panggilan** (*call stack* atau *stack trace*) adalah alat untuk menelusuri rincian kode perintah di balik kode program yg berjalan. Biasanya berisi perintah komputer yg terjadi di balik setiap kode program, misalnya pemanggilan perintah sistem seperti Windows API atau perintah mesin virtual.
-- **Catatan** (*log* atau *event log*) adalah alat untuk menampilkan berbagai jenis catatan baik yg dihasilkan oleh program maupun *debugger* sendiri atau program lain yg terkait.
+- **Tumpukan panggilan** (*call stack* atau *stack trace*) adalah alat untuk menelusuri rincian kode perintah di balik kode program yg berjalan. Biasanya berisi perintah yg dibuat kompilator di balik setiap kode program, misalnya pemanggilan perintah sistem seperti Windows API atau perintah mesin virtual.
+- **Catatan** (*log* atau *event log*) adalah alat untuk menampilkan berbagai jenis catatan, baik yg dihasilkan oleh program maupun *debugger* sendiri atau program lain yg terkait.
 - **Utas** (*thread* atau *thread list*) adalah alat untuk menampilkan utas perintah yg bekerja ketika program sedang berjalan. Ini penting untuk awakutu pada aplikasi multi-utas (*multithread*).
-- ***Module*** (penampil subprogram luar) adalah alat untuk menampilkan subprogram luar yg terlibat, seperti berkas *.dll* atau *.so* atau *unit* dalam Pascal, ketika program sedang berjalan.
-- ***Disassembler*** (penampil kode *assembler*) adalah alat untuk menampilkan kode mesin dari kode program asal.
-- ***CPU*** adalah alat untuk menampilkan yg sedang terjadi di *processor* komputer saat program sedang berjalan.
-- ***Memory*** adalah alat untuk menampilkan yg sedang tersimpan di *memory* komputer saat program sedang berjalan.
+- ***Module*** (subprogram luar) adalah alat untuk menampilkan subprogram luar yg terlibat, seperti berkas *.dll* atau *.so* atau *unit* dalam Pascal, ketika program sedang berjalan.
+- ***Disassembler*** adalah alat untuk menampilkan kode mesin (*assembler*) dari kode program aslinya.
+- ***CPU*** adalah alat untuk menampilkan yg terjadi di *processor* komputer saat program sedang berjalan.
+- ***Memory*** adalah alat untuk menampilkan yg tersimpan di *memory* komputer saat program sedang berjalan.
 
 Bagi pemrogram pemula, yg penting dikuasai lebih dulu adalah perintah penelurusan dan alat bantu pantauan. Dengan memanfaatkan fasilitas tersebut, pemrogram bisa mengikuti alur program langkah demi langkah serta memantau isi setiap variabel atau obyek yg dibuat selama program sedang berjalan. Dengan demikian, pemrogram bisa betul-betul memahami apa yg sedang terjadi di setiap langkah dalam kode program yg disusunnya.
+
+Berikut adalah contoh bagaimana melakukan awakutu. Contoh dibuat dengan bahasa Pascal menggunakan kompilator Free Pascal, penyunting VS Code dengan ekstensi OmniPascal, *debugger* LLDB, di sistem operasi MacOS.
+
+![vscode_debugging](img/vscode_debug.gif)
+
+Menarik bukan?
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/6).  
