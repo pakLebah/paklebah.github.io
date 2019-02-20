@@ -69,9 +69,11 @@ Selain untuk menelusuri jalannya program, biasanya *debugger* juga menyertakan a
 - ***CPU*** adalah alat untuk menampilkan yg terjadi di *processor* komputer saat program sedang berjalan.
 - ***Memory*** adalah alat untuk menampilkan yg tersimpan di *memory* komputer saat program sedang berjalan.
 
-Bagi pemrogram pemula, yg penting dikuasai lebih dulu adalah perintah penelurusan dan alat bantu pantauan. Dengan memanfaatkan fasilitas tersebut, pemrogram bisa mengikuti alur program langkah demi langkah serta memantau isi setiap variabel atau obyek yg dibuat selama program sedang berjalan. Dengan demikian, pemrogram bisa betul-betul memahami apa yg sedang terjadi di setiap langkah dalam kode program yg disusunnya.
+Bagi pemrogram pemula, yg penting dikuasai lebih dulu adalah perintah penelurusan dan alat bantu pantauan. Dengan memanfaatkan fasilitas tersebut, pemrogram bisa mengikuti alur program baris demi baris serta memantau isi setiap variabel atau obyek yg dibuat selama program sedang berjalan. Pemrogram bisa mengamati secara langsung apa yg sedang terjadi selama programnya bekerja. Dengan demikian, pemrogram bisa betul-betul memahami kode program yg disusunnya.
 
-Berikut adalah contoh bagaimana melakukan awakutu. Contoh dibuat dengan bahasa Pascal menggunakan kompilator Free Pascal, penyunting VS Code dengan ekstensi OmniPascal, *debugger* LLDB, di sistem operasi MacOS.
+Dengan penguasaan yg baik pada teknik awakutu, pemrogram bisa menelusuri kode program pada bagian yg diduga sebagai sumber masalah. Pemrogram menelaah bagaimana program bekerja pada bagian tersebut secara langkah demi langkah, sambil melakukan analisa kode dan algoritma. Demikian seterusnya hingga ditemukan sumber masalahnya (*bug*). Setelah itu, langkah selanjutnya bisa jadi adalah perbaikan kode program yg salah (*bug fixing*), perbaikan algoritma menjadi lebih baik, atau bahkan menulis ulang bagian tersebut karena kesalahan algoritma yg fatal.
+
+Berikut adalah contoh bagaimana melakukan awakutu. Contoh dibuat dengan bahasa Pascal menggunakan kompilator Free Pascal, penyunting VS Code dengan ekstensi OmniPascal, dan *debugger* LLDB, di sistem operasi MacOS.
 
 ![vscode_debugging](img/vscode_debug.gif)
 
