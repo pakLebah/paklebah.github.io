@@ -114,9 +114,9 @@ Alat bantu pemrograman adalah aplikasi komputer juga. Namun tidak semua alat ban
 
 ### 6. Tersedia banyak sumber pembelajaran.
 
-Belajar bahasa pemrograman –atau bahkan belajar apa pun di jaman sekarang– tentu perlu adanya dukungan sumber-sumber pembelajaran yg membantu proses belajar. Misalnya buku (terutama yg berbahasa Indonesia), berbagai contoh program, artikel tutorial, panduan video, forum tanya-jawab, orang-orang yg ahli, hingga pelatihan atau kursus, atau bahkan jadi materi pelajaran di sekolah atau kampus. Semakin banyak sumber pembelajaran, pemula semakin terbantu dalam belajar.
+Belajar bahasa pemrograman –atau bahkan belajar apa pun di jaman sekarang– tentu perlu adanya dukungan sumber-sumber pembelajaran yg membantu proses belajar. Misalnya buku (terutama yg berbahasa Indonesia), berbagai contoh program, artikel tutorial, panduan video, forum tanya-jawab, orang-orang yg ahli, pelatihan atau kursus, materi pelajaran di sekolah atau kampus, dan sebagainya. Semakin banyak sumber pembelajaran, pemula semakin terbantu dalam belajar.
 
-Bahasa pemrograman yg terkenal dan banyak digunakan biasanya memiliki sumber-sumber pembelajaran yg banyak pula. Contohnya bahasa JavaScript. Tetapi bahasa lama yg dulu pernah terkenal dan pernah banyak digunakan biasanya juga memiliki sumber-sumber pembelajaran yg banyak karena sejatinya bahasa lama itu tidak pernah benar-benar mati, apalagi bahasa lama yg masih digunakan secara profesional dan diajarkan di sekolah dan kampus. Misalnya seperti bahasa C, bahasa Perl, bahasa Pascal, dan lain-lain.
+Bahasa pemrograman yg terkenal dan banyak digunakan biasanya memiliki sumber-sumber pembelajaran yg banyak pula. Contohnya JavaScript yg sekarang sedang jadi bahasa paling populer di industri perangkat lunak. Tetapi bahasa lama yg dulu pernah terkenal dan pernah banyak digunakan biasanya juga memiliki sumber-sumber pembelajaran yg banyak karena sejatinya bahasa lama tidak pernah benar-benar mati, apalagi bahasa lama yg masih digunakan secara profesional dan diajarkan di sekolah dan kampus. Misalnya seperti bahasa C, bahasa Perl, bahasa Pascal, dan lain-lain.
 
 ### 7. Mempunyai komunitas pemrogram yg besar.
 
