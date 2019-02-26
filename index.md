@@ -1,8 +1,10 @@
 [![header iamge](img/programming.png)](https://www.shutterstock.com/image-vector/programming-concept-illustration-signs-icons-on-631891025)
 
-> *"I'm not writing computer program, I'm writing digital poetry." ~Mr Bee*
+> *"I'm not writing computer program, I'm writing digital poetry."    
+> ~Mr Bee*
 
 #### February, 2019:
+* [Bahasa Pemrograman Untuk Pemula](bahasa-pemrograman-pemula.md)
 * [Mengenal Awakutu](mengenal-awakutu.md)
 
 #### July, 2018:
