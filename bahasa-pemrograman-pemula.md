@@ -103,7 +103,7 @@ Bagi pemrogram yg terbiasa dengan bahasa C++ misalnya, kode program bahasa Pasca
 
 Bahkan bagi orang yg belum pernah menulis program komputer, contoh kode program dengan bahasa Pascal di atas lebih mudah dimengerti daripada contoh kode program dengan bahasa lainnya di atas. Itulah sebabnya saya katakan, menulis kode program dalam bahasa Pascal itu seperti menulis puisi.
 
-> *I don't write computer code, I write digital poetry.*    
+> *"I don't write computer code, I write digital poetry."*    
 > *~Pak Lebah*
 
 ### 5. Alat bantunya tersedia di mana saja.
