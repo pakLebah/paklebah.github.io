@@ -126,7 +126,9 @@ Dari komunitas, semua anggota bisa saling berbagi manfaat yg seringkali tidak bi
 
 ## Apa Bahasa Pemrograman yg Paling Cocok Bagi Pemula?
 
-Menurut saya, jawaban untuk pertanyaan di atas adalah [bahasa Pascal][2]. Mari kita uji jawaban saya berdasarkan 7 sifat bahasa yg telah saya sebutkan di atas.
+![SAY NO TO TURBO PASCAL!](https://pak.lebah.web.id/img/no_tp.gif)
+
+Menurut saya, jawaban untuk pertanyaan di atas adalah **bahasa Pascal**. Namun bahasa Pascal yg saya maksud **bukan** Turbo Pascal. Saya justru [menentang penggunaan Turbo Pascal][3] di jaman modern ini. Bahasa Pascal yg saya maksud adalah [bahasa (Object) Pascal yg modern][2]. Mari kita uji jawaban saya berdasarkan 7 sifat bahasa yg telah saya sebutkan di atas.
 
 1. Kosakatanya mendekati bahasa manusia? ✔︎ Terpenuhi.    
 2. Memiliki sistem tipe data yg statis? ✔︎ Terpenuhi.    
@@ -149,3 +151,4 @@ Thank you. 😊
 
 [1]: https://paklebah.github.io/mengenal-awakutu.html
 [2]: https://pak.lebah.web.id/pascal5.html
+[3]: https://pak.lebah.web.id/saynototp.html
