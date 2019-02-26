@@ -10,7 +10,7 @@
 >
 > You're excited to see what you will come up with later.
 >
-> ＿＿＿＿＿    
+> —————    
 > *Inspired by "[**Everyone Can Code**][1]" book from Apple.*
 
 Belajar pemrograman itu memang sulit, tapi semua orang bisa melakukannya. Pemrograman adalah ilmu berpikir. Dan ilmu berpikir adalah salah satu kemampuan dasar manusia, sama seperti membaca, menulis, dan berhitung. Semua orang pasti bisa memahaminya jika mau belajar dengan baik dan tekun. Sama seperti belajar sepeda itu sulit, bahkan seringkali sampai jatuh dan terluka, tapi toh semua orang bisa melakukannya.
@@ -21,3 +21,11 @@ Kendala kebanyakan pembelajar pemrograman bukanlah kurangnya kemampuan, melainka
 
 Walaupun tidak ada bahasa pemrograman yg betul-betul terbaik, tapi tidak semua bahasa pemrograman cocok untuk pemula atau pembelajar. Bahasa pemrograman yg disarankan bagi pemula atau pembelajar sebaiknya yg memiliki sifat bahasa sebagai berikut:
 
+———  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
+Thank you. 😊
+
+---
+<span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
+
+[1]: https://www.apple.com/id/everyone-can-code/
