@@ -126,7 +126,7 @@ Dari komunitas, semua anggota bisa saling berbagi manfaat yg seringkali tidak bi
 
 ## Apa Bahasa Pemrograman yg Paling Cocok Bagi Pemula?
 
-Bagi saya, jawaban dari pertanyaan di atas adalah [bahasa Pascal][2]. Mari kita uji jawaban saya berdasarkan 7 sifat bahasa yg telah saya sebutkan di atas.
+Menurut saya, jawaban untuk pertanyaan di atas adalah [bahasa Pascal][2]. Mari kita uji jawaban saya berdasarkan 7 sifat bahasa yg telah saya sebutkan di atas.
 
 1. Kosakatanya mendekati bahasa manusia? ✔︎ Terpenuhi.    
 2. Memiliki sistem tipe data yg statis? ✔︎ Terpenuhi.    
