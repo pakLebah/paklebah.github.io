@@ -99,19 +99,27 @@ begin
 end.
 ```
 
-Bagi pemrogram yg terbiasa dengan bahasa C++ misalnya, kode program bahasa Pascal di atas terkesan bertele-tele (*verbose*). Tapi bagi pemula, tata bahasa Pascal di atas memaksa untuk disiplin dalam penulisan kode program. Dari baris pertama sudah jelas bahwa berkas ini berisi program utama bernama `Loop`, ada blok deklarasi variabel dengan penanda `var`, serta program utama ada dalam pasangan penanda `begin`...`end`.
+Bagi pemrogram yg terbiasa dengan bahasa C++ misalnya, kode program bahasa Pascal di atas terkesan bertele-tele (*verbose*). Tapi bagi pemula, tata bahasa Pascal di atas memaksa untuk disiplin dalam penulisan kode program. Dari baris pertama sudah jelas bahwa berkas ini berisi program utama bernama `Loop`, ada blok deklarasi variabel dengan penanda `var`, blok kumpulan perintah ada dalam pasangan penanda `begin`...`end;`, serta program utama ada dalam pasangan penanda `begin`...`end`.
+
+Bahkan bagi orang yg belum pernah menulis program komputer, contoh kode program dengan bahasa Pascal di atas lebih mudah dimengerti daripada contoh kode program dengan bahasa lainnya di atas. Itulah sebabnya saya katakan, menulis kode program dalam bahasa Pascal itu seperti menulis puisi. *I don't write computer code, I write digital poetry.*
 
 ### 5. Alat bantunya tersedia di mana saja.
 
-Swift
+Belajar pemrograman tidak hanya memahami bahasa saja, tetapi juga harus bisa menggunakan alat bantu pemrograman. Bahasa pemrograman tidak bisa jadi aplikasi tanpa alat bantu pemrograman. Alat bantu pemrograman antara lain *compiler* atau *interpreter* untuk mengubah kode program menjadi kode komputer, penyunting atau *editor* atau IDE (*integrated development environment*) untuk menulis kode program dengan berbagai fasilitas yg memudahkan, alat [awakutu][1] atau *debugger* untuk penelusuran kode program, dan *linker* untuk merangkai berbagai kode program menjadi aplikasi siap pakai.
+
+Alat bantu pemrograman adalah aplikasi komputer juga. Namun tidak semua alat bantu pemrograman tersedia di berbagai jenis komputer, baik secara sistem operasi maupun sistem arsitektur komputer. Memilih bahasa pemrograman untuk belajar sebaiknya yg tersedia di berbagai jenis komputer, paling tidak di sistem komputer yg digunakan. Contoh, jika anda pengguna sistem operasi Windows maka hindari memilih bahasa Swift karena tidak tersedia alat bantu pemrograman Swift di Windows. Alat bantu pemrograman bahasa Swift hanya tersedia secara lengkap di sistem operasi MacOS saja.
 
 ### 6. Tersedia banyak sumber pembelajaran.
 
-Erlang
+Belajar bahasa pemrograman –atau bahkan belajar apa pun di jaman sekarang– tentu perlu adanya dukungan sumber-sumber pembelajaran yg membantu proses belajar. Misalnya buku, berbagai contoh kode program, artikel tutorial, panduan video, forum tanya-jawab, orang-orang yg sudah ahli, hingga adanya pelatihan atau kursus. Bahkan bila perlu, bahasa pemrograman yg juga diajarkan di sekolah atau kampus. Semakin banyak sumber pembelajaran, pemula semakin terbantu dalam belajar.
+
+Bahasa pemrograman yg terkenal dan banyak digunakan biasanya memiliki sumber-sumber pembelajaran yg banyak pula. Contohnya bahasa JavaScript. Tetapi bahasa lama yg dulu pernah terkenal dan pernah banyak digunakan biasanya juga memiliki sumber-sumber pembelajaran yg tetap banyak karena sejatinya bahasa lama itu tidak pernah benar-benar mati, apalagi bahasa lama yg masih diajarkan di sekolah dan kampus. Misalnya seperti bahasa C, bahasa Perl, bahasa Pascal, dan lain-lain.
 
 ### 7. Mempunyai komunitas pemrogram yg besar.
 
-Rust
+Satu hal penting yg sangat membantu pemula dalam belajar adalah komunitas pemrogram yg besar dan aktif. Tidak seperti buku atau tutorial sebagai sumber pembelajaran yg searah dan pasif, komunitas adalah sumber pembelajaran multi-arah dan aktif. Banyak hal bermanfaat yg bisa kita ambil dari komunitas **dan** banyak hal berguna yg bisa kita sumbangkan ke komunitas. Dalam komunitas yg baik, biasanya terbangun interaksi yg menyenangkan antar anggota komunitas.
+
+Dari komunitas, semua anggota bisa saling berbagi manfaat yg seringkali tidak bisa didapatkan dari sumber pembelajaran yg lain. Misalnya membangun relasi dengan orang-orang tertentu (terkait karir), mendapatkan pelajaran berharga dari pengalaman orang lain, memperoleh pengetahuan-pengetahuan non-teknis yg penting, seperti lowongan kerja, tawaran kerjasama, dan lain sebagainya. Sebuah komunitas yg baik adalah yg sebagian besar anggotanya aktif berkontribusi.
 
 ## Apa Bahasa Pemrograman yg Paling Cocok Bagi Pemula?
 
@@ -124,4 +132,4 @@ Thank you. 😊
 ---
 <span style="float: left">← [Home](index.md)</span> <span style="float: right">[Top](#top) ↑</span>
 
-[1]: https://www.apple.com/id/everyone-can-code/
+[1]: https://paklebah.github.io/mengenal-awakutu.html
