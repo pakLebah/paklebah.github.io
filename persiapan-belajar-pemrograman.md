@@ -14,19 +14,24 @@ Ini sudah saya jelaskan di artikel sebelumnya, [Bahasa Pemrograman Untuk Pemula]
 
 Ini sudah saya jelaskan panjang lebar di buku kecil saya, [Bekal Belajar Pemrograman][13]. Di buku tersebut saya membahas tentang konsep dan prinsip dasar dalam pemrograman, termasuk pola pikir pemrogram itu sendiri.
 
-## 3. Baca Panduan Bahasa Pemrograman
+## 3. Pelajari Panduan Bahasa Pemrograman
 
 Di grup pemrograman [Pascal Indonesia][1], saya pernah sampaikan, *"Jangan sekali-kali menulis sebaris pun kode program jika belum paham tata cara penulisan bahasa pemrograman (syntax) yg digunakan."* Logikanya, bagaimana mungkin seseorang bisa menulis kode program dengan benar jika cara menulisnya saja belum tahu? Mustahil. Ibaratnya, kita ingin bicara dalam bahasa Inggris tapi kita tidak tahu sedikit pun kosakata dan tata bahasa Inggris. Apa mungkin bisa?
 
 Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis program, bacalah terlebih dahulu buku panduan bahasa pemrograman yg digunakan. Tentu bacalah buku yg membahas versi bahasa yg terbaru dan masih digunakan saat ini, jangan versi *jadul* yg sudah tidak dipakai lagi. Misalnya belajar bahasa Pascal, bacalah buku yg membahas [bahasa Pascal modern][2], jangan buku yg membahas bahasa Pascal *jadul* seperti [Turbo Pascal][3].
 
-<img align="right" src="img/delphi_handbook.jpg">
-
 Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dipelajari:
 
+<img align="right" src="img/delphi_handbook.jpg">
+
+* Buku kecil panduan [bahasa Pascal dengan Free Pascal][20].
 * Buku [*Essential Pascal*][6] oleh Marco Cantù.
 * Buku [*Object Pascal Handbook*][7] oleh Marco Cantù.
-* Dokumen panduan resmi [Free Pascal][4].
+* Panduan daring [bahasa Pascal dari tutorialspoint.com][18]
+* Panduan daring [bahasa Pascal dari pp4s.co.uk][19]
+
+Berikut adalah daftar referensi (acuan) bahasa Pascal:
+* Dokumen bahasa [Free Pascal][4].
 * Dokumen wiki [Free Pascal dan Lazarus IDE][5].
 * Dokumen wiki [Delphi][8] dari Embarcadero.
 
@@ -42,23 +47,33 @@ Untuk pengguna Free Pascal, hindari penyunting teks (*console*) bawaan Free Pasc
 
 [![Delphi demo video.](img/delphi_rio_thumb.png)](https://player.vimeo.com/video/300656745)
 
-## 5. Luangkan Waktu Untuk Berlatih Secara Rutin
+## 5. Mulai Belajar Membuat Program
 
-Pemrograman selain merupakan ilmu, juga menerupakan keahlian (*skill*). Yg namanya keahlian perlu dilatih secara terus-menerus untuk menjaga, mengasah, dan meningkatkan kemampuan yg dimiliki. Membaca buku saja, sebanyak apa pun buku yg dibaca, tidak akan membuat pemula menjadi pemrogram yg ahli. Sama seperti belajar berenang, membaca selemari buku teknik berenang, tidak akan membuat kita mendadak jadi perenang yg andal.
+Pemrograman selain merupakan ilmu, juga menerupakan keahlian (*skill*). Yg namanya keahlian harus dipraktekkan secara terus-menerus untuk menjaga, mengasah, dan meningkatkan kemampuan yg dimiliki. Membaca buku saja –sebanyak apa pun buku yg dibaca– namun tanpa praktek sama sekali, tidak akan membuat pemula menjadi pemrogram yg ahli. Sama seperti belajar berenang, membaca selemari buku teknik berenang namun tidak pernah masuk ke kolam renang, tidak akan membuat pembacanya mendadak jadi perenang yg andal. Demikian pula pemrograman.
 
-Pemrogram yg sudah jago pun akan menurun keahliannya jika lama tidak membuat program. Apalagi pemula, harus selalu luangkan waktu secara rutin untuk membangun kemampuan. Saran saya minimal berlatih seminggu sekali, misalnya sehari di akhir pekan digunakan khusus untuk berlatih pemrograman. Jika seorang pemula betul-betul ingin menjadi pemrogram yg andal, maka jadwalkan latihan rutin dan lakukan secara disiplin.
+Setelah buku dibaca dan penyunting terpasang, selanjutnya adalah mulai membuat program. Paling mudah adalah mengikuti panduan dari buku yg dipelajari. Salah satu kiat sederhana agar lebih cepat memahami bahasa pemrograman adalah tidak melakukan salin-tempel (*copy-paste*) kode program dari internet atau buku (jika disertakan berkas kode programnya). Sebaiknya ketik ulang saja setiap program yg ingin dicoba. Selain membuat lebih paham bahasanya, ketik ulang juga akan membuat pemula menjadi terbiasa dengan penyunting yg digunakan berikut fitur-fiturnya.
 
-Berlatih apa? Apa saja, pokoknya buatlah program dengan bahasa yg sedang dipelajari. Tidak usah bikin program yg muluk-muluk atau yg rumit, mulai dari yg sederhana saja dulu, sesuaikan dengan tingkat kemampuan yg sudah dipelajari. Supaya berlatihnya tidak membosankan, ada beberapa materi yg cocok untuk latihan pemula, yaitu:
+Satu hal yg penting diingat adalah belajarlah hingga tuntas, berdasarkan buku panduan yg digunakan. Ikuti dan pahami contoh program yg tersedia sejak yg paling awal hingga yg paling akhir. Jangan belajar bahasa pemrograman setengah-setengah lalu beralih ke bahasa pemrograman yg lain karena bisa jadi akan membingungkan dan justru makin menyulitkan pemahaman. Saya sarankan untuk ikuti dua buku panduan karya Marco Cantù di atas, mulai dari *Essential Pascal* lalu lanjut ke *Object Pascal Handbook*.
 
-<img align="right" src="https://raw.githubusercontent.com/git-bee/gaple/master/gaple.gif">
+## 6. Luangkan Waktu Untuk Berlatih Secara Rutin
+
+Kembali ke analogi berenang, apakah dengan berlatih renang hanya 1-2 kali akan membuat jadi perenang andal? Tentu tidak. Pemrogram yg sudah jago pun akan menurun keahliannya jika lama tidak membuat program. Apalagi pemula, harus selalu luangkan waktu secara rutin untuk membangun kemampuannya. Saran saya minimal berlatih seminggu sekali, misalnya sehari di akhir pekan digunakan khusus untuk berlatih pemrograman. Jika seorang pemula betul-betul ingin menjadi pemrogram yg andal, maka jadwalkan latihan rutin dan berlatihlah secara disiplin.
+
+Berlatih membuat program apa? Apa saja. Pokoknya buatlah program dengan bahasa yg sedang dipelajari. Namun yg namanya pemula tentu tidak harus bikin program yg muluk-muluk dan rumit. Mulai dari yg sederhana saja dulu, disesuaikan dengan tingkat kemampuan yg sudah dipelajari. Supaya berlatihnya tidak membosankan, ada beberapa materi yg cocok untuk latihan pemula, yaitu:
+
+![Bola pantul](https://gist.githubusercontent.com/pakLebah/1748ea96b95ccbe5c21bf5b22b84e0a6/raw/a39be5604039621584ee71ff2ce590dc0063af88/z_ubounce.gif)
 
 * **Olah matematika.** Berlatih matematika penting untuk mengasah kemampuan logika numerik pemrogram. Bisa dimulai dengan menyelesaikan soal-soal di situs [Project Euler][15], mulailah dari soal-soal yg mudah.
 
-* **Olah grafis sederhana.** Berlatih grafis penting untuk mengasah kemampuan logika visual pemrogram. Bisa dimulai dengan membuat fraktal, penampil persamaan matematik, animasi partikel, dsb. Kreatiflah.
+* **Olah grafis sederhana.** Berlatih grafis penting untuk mengasah kemampuan logika visual pemrogram. Bisa dimulai dengan membuat fraktal, penampil persamaan matematika, animasi partikel (seperti video di atas), membuat gambar dengan program, dsb. Bisa dilengkapi dengan interaksi baik papan ketik atau tetikus. Yg kreatiflah.
+
+<img align="right" src="https://raw.githubusercontent.com/git-bee/gaple/master/gaple.gif">
 
 * **Membuat *game* sederhana.** Berlatih membuat *game* penting untuk mengasah kemampuan membangun aplikasi yg terpadu sebab *game* melibatkan hampir seluruh kemampuan pemrograman, mulai dari matematika, visual, interaksi, antarmuka, olah data, dan memadukan semuanya menjadi sebuah permainan yg menarik. Mulailah dari *game* yg sederhana, misalnya Tic Tac Toe, atau Dakon, atau Silang Pentol, atau [Gaple][16], dan sebagainya.
 
 * **Bermain *game* dengan program.** Siapa bilang belajar pemrograman tidak bisa dengan *game*? Bayangkan anda bermain perang-perangan di luar angkasa dengan pesawat luar angkasa, tapi... pesawatnya tidak dikendalikan dengan tombol atau tetikus, melainkan dengan kode program. Menarik bukan? Silakan mencobanya di [CodinGame][17].
+
+## 7.
 
 Nah, apakah anda juga seorang pemula atau berniat belajar pemrograman? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][1]. Selamat belajar!
 
@@ -86,3 +101,6 @@ Thank you. 😊
 [15]: https://projecteuler.net/archives
 [16]: https://github.com/git-bee/gaple
 [17]: https://www.codingame.com/
+[18]: https://www.tutorialspoint.com/pascal/
+[19]: http://pp4s.co.uk/main/tutorials.html
+[20]: https://pak.lebah.web.id/ebook/bahasa-pascal.pdf
