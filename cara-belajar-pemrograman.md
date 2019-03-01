@@ -67,6 +67,8 @@ Pemrograman selain merupakan ilmu, juga menerupakan keahlian (*skill*). Yg naman
 
 Setelah buku dibaca dan penyunting terpasang, selanjutnya adalah mulai membuat program. Paling mudah adalah mengikuti panduan dari buku yg dipelajari. Salah satu kiat sederhana agar lebih cepat memahami bahasa pemrograman adalah tidak melakukan salin-tempel (*copy-paste*) kode program dari internet atau buku (jika disertakan berkas kode programnya). Sebaiknya ketik ulang saja setiap program yg ingin dicoba. Selain membuat lebih paham bahasanya, ketik ulang juga akan membuat pemula jadi terbiasa dengan penyunting yg digunakan dengan mencoba berbagai fitur-fiturnya.
 
+<img align="right" src="img/debug_logo.png">
+
 Mempelajari program tidak cukup hanya dengan menulis program, menjalankannya, sukses, lalu selesai. Pemula harus betul-betul memahami setiap topik yg sedang dipelajarinya. Setiap huruf, angka, dan tanda baca dalam kode program itu ada maknanya. Pahami betul makna setiap aturan penulisan program (sintaks). Pahami cara kerja program dengan menjalankan kode program baris per baris dan ikuti alurnya. Di sinilah pentingnya kemampuan [awakutu][16]. Cobalah bereksperimen dengan mengubah contoh kode program yg diberikan. Jangan takut salah, justru dari kesalahanlah pemula bisa belajar menjadi lebih baik.
 
 Satu hal yg penting diingat adalah belajarlah hingga tuntas, berdasarkan buku panduan yg digunakan. Ikuti dan pahami contoh program yg diberikan sejak yg paling awal hingga yg paling akhir. Jangan belajar bahasa pemrograman setengah-setengah lalu beralih ke bahasa pemrograman yg lain karena bisa jadi akan membingungkan dan justru makin menyulitkan pemahaman, atau lebih buruk lagi yaitu menimbulkan salah paham.
