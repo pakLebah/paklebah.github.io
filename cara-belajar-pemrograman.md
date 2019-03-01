@@ -37,9 +37,9 @@ Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan 
 
 * Buku [*Essential Pascal*][7] oleh Marco Cantù.
 * Buku [*Object Pascal Handbook*][8] oleh Marco Cantù.
-* Panduan bahasa Pascal dari [pp4s.co.uk][9]
-* Panduan bahasa Pascal dari [tutorialspoint.com][10]
-* Panduan bahasa Pascal dari [pascal-programming.info][11]
+* Panduan bahasa Pascal dari [pp4s.co.uk][9].
+* Panduan bahasa Pascal dari [tutorialspoint.com][10].
+* Panduan bahasa Pascal dari [pascal-programming.info][11].
 
 Berikut adalah daftar referensi (acuan) bahasa Pascal:
 * Dokumen bahasa [Free Pascal][12].
@@ -48,7 +48,18 @@ Berikut adalah daftar referensi (acuan) bahasa Pascal:
 
 > **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa (*Object*) Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
 
-Semua dokumen di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya. Sementara kemampuan bahasa Inggris kurang, silakan beli buku cetak bahasa Pascal yg berbahasa Indonesia. Atau bisa juga dimulai dari buku kecil [ini][15].
+Semua dokumen di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya. Sementara kemampuan bahasa Inggris masih kurang, silakan beli buku cetak bahasa Pascal yg berbahasa Indonesia. Atau bisa juga dimulai dari buku kecil [ini][15].
+
+## 4. Pasang Aplikasi Penyunting atau IDE
+
+Menulis kode program tentu butuh aplikasi penyunting (*editor*), tapi bukan penyunting biasa seperti aplikasi Notepad. Gunakanlah aplikasi penyunting khusus pemrograman yg menyediakan fitur-fitur yg membantu dan memudahkan dalam menulis kode program, atau biasa disebut IDE (*integrated development environment* atau lingkungan pengembangan terpadu). Dan yg terpenting adalah harus menyediakan fitur dan alat bantu untuk [awakutu][16]. Fitur awakutu **sangat penting** bagi pemula. Pemula harus menghindari penyunting yg tidak menyediakan alat awakutu.
+
+> *"Seseorang tidak layak disebut pemrogram jika belum menguasai teknik awakutu (debugging)."*    
+> *~Pak Lebah*
+
+Untuk pengguna Free Pascal, hindari penyunting teks (*console*) bawaan Free Pascal. Sekarang sudah abad 21, gunakanlah penyunting grafis (GUI atau *graphical user interface*). Penyunting teks bawaan Free Pascal lebih ditujukan untuk pemrogram yg sudah pintar di lingkungan teks (CLI atau *command line interface*) dan fitur yg disediakan sangat terbatas sehingga sangat tidak cocok bagi pemula. Saya sarankan gunakan [Lazarus IDE][17] (untuk Free Pascal) atau [Delphi][18] yg memiliki banyak fitur canggih. Atau minimal, gunakanlah [Free Pascal dengan Visual Studio Code][19].
+
+[![Delphi demo video.](img/delphi_rio_thumb.png)](https://player.vimeo.com/video/300656745)
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
@@ -72,4 +83,7 @@ Thank you. 😊
 [13]: http://wiki.freepascal.org
 [14]: http://docwiki.embarcadero.com/RADStudio/Rio/en/Main_Page
 [15]: https://pak.lebah.web.id/ebook/bahasa-pascal.pdf
-[16]: 
+[16]: https://paklebah.github.io/mengenal-awakutu.html
+[17]: https://www.lazarus-ide.org/
+[18]: https://www.embarcadero.com/products/delphi
+[19]: https://paklebah.github.io/fpc-dan-vscode.html
