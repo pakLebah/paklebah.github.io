@@ -30,7 +30,7 @@ Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan 
 • Dokumen wiki [Free Pascal dan Lazarus IDE][5].    
 • Dokumen wiki [Delphi][8] dari Embarcadero.
 
-> **Catatan**: Free Pascal dan Delphi adalah dialek bahasa Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
+> **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa (*Object*) Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
 
 Jika bahasa Inggris jadi kendala, silakan belajar bahasa Inggris dulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya.
 
