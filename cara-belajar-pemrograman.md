@@ -95,7 +95,7 @@ Belajar pemrograman akan sangat terbantu jika ada tempat bertanya saat ada kesul
 
 Komunitas seharusnya tidak hanya sebagai tempat bertanya, namun juga tempat berbagi pengetahuan dan karya sesama anggotanya. Interaksi dalam komunitas itu bukan hanya tanya-jawab dua arah saja, tapi multi-arah yaitu banyak orang berbagi ke orang banyak. Seorang pemula juga berhak dan perlu berbagi pengetahuan yg sudah dipahaminya atau karya yg sudah dibuatnya ke komunitas. Menjadi pemula bukan alasan untuk tidak berbagi.
 
-Setiap kali pemula berhasil membuat sebuah program, apa pun itu, perlu dirayakan dengan membagikannya ke komunitas. Tidak perlu malu berbagi karya walaupun mungkin dianggap sederhana. Berbagi karya itu akan membangun rasa percaya diri pemula. Dan rasa percaya diri itu penting untuk membangun semangat belajar. Dalam komunitas yg baik, siapa pun yg berbagi karya apa pun, pasti akan dihargai dan disemangati untuk berkarya yg lebih baik lagi.
+Setiap kali pemula berhasil membuat sebuah program –apa pun itu– perlu dirayakan dengan membagikannya ke komunitas. Tidak perlu malu berbagi karya walaupun mungkin dianggap sederhana. Berbagi karya itu akan membangun rasa percaya diri pemula. Dan rasa percaya diri itu penting untuk membangun semangat belajar. Dalam komunitas yg baik, siapa pun yg berbagi karya apa pun, pasti akan dihargai dan disemangati untuk berkarya yg lebih baik lagi.
 
 [![Pascal Indonesia](img/pascal.id.banner.png)](https://www.facebook.com/groups/pascal.id/)
 
