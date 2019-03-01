@@ -37,17 +37,18 @@ Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan 
 
 * Buku [*Essential Pascal*][7] oleh Marco Cantù.
 * Buku [*Object Pascal Handbook*][8] oleh Marco Cantù.
-* Panduan daring [bahasa Pascal dari tutorialspoint.com][9]
-* Panduan daring [bahasa Pascal dari pp4s.co.uk][10]
+* Panduan bahasa Pascal dari [pp4s.co.uk][9]
+* Panduan bahasa Pascal dari [tutorialspoint.com][10]
+* Panduan bahasa Pascal dari [pascal-programming.info][11]
 
 Berikut adalah daftar referensi (acuan) bahasa Pascal:
-* Dokumen bahasa [Free Pascal][11].
-* Dokumen wiki [Free Pascal dan Lazarus IDE][12].
-* Dokumen wiki [Delphi][13] dari Embarcadero.
+* Dokumen bahasa [Free Pascal][12].
+* Dokumen wiki [Free Pascal dan Lazarus IDE][13].
+* Dokumen wiki [Delphi][14] dari Embarcadero.
 
 > **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa (*Object*) Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
 
-Semua dokumen di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya. Sementara kemampuan bahasa Inggris kurang, silakan beli buku cetak bahasa Pascal yg berbahasa Indonesia. Atau bisa juga dimulai dari buku kecil [ini][14].
+Semua dokumen di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya. Sementara kemampuan bahasa Inggris kurang, silakan beli buku cetak bahasa Pascal yg berbahasa Indonesia. Atau bisa juga dimulai dari buku kecil [ini][15].
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
@@ -64,10 +65,11 @@ Thank you. 😊
 [6]: https://pak.lebah.web.id/saynototp.html
 [7]: http://www.marcocantu.com/epascal/
 [8]: http://forms.embarcadero.com/sDownloadMarcoseBook
-[9]: https://www.tutorialspoint.com/pascal/
-[10]: http://pp4s.co.uk/main/tutorials.html
-[11]: https://freepascal.org/docs.html
-[12]: http://wiki.freepascal.org
-[13]: http://docwiki.embarcadero.com/RADStudio/Rio/en/Main_Page
-[14]: https://pak.lebah.web.id/ebook/bahasa-pascal.pdf
-[15]: 
+[9]: http://pp4s.co.uk/main/tutorials.html
+[10]: https://www.tutorialspoint.com/pascal/
+[11]: http://www.pascal-programming.info
+[12]: http://freepascal.org/docs.html
+[13]: http://wiki.freepascal.org
+[14]: http://docwiki.embarcadero.com/RADStudio/Rio/en/Main_Page
+[15]: https://pak.lebah.web.id/ebook/bahasa-pascal.pdf
+[16]: 
