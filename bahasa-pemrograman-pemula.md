@@ -79,7 +79,7 @@ Berbeda dengan pemula yg baru saja belajar perulangan dengan perintah `for` dala
 Karena belum terbiasa menulis kode program yg panjang dan rumit, pemula biasanya kurang disiplin dan kurang teliti. Contoh yg paling umum adalah bikin variabel di mana-mana, kadang dengan nama yg sama (baik sengaja atau tidak). Ketika program tidak bekerja sesuai dengan yg diharapkan karena ada kesalahan lingkup (*scope*), lalu bingung sendiri mencari salahnya di mana. Ada beberapa bahasa yg menerapkan tata deklarasi yg lebih ketat dan disiplin, contohnya adalah bahasa Pascal. Perhatikan contoh berikut:
 
 ```pascal
-program Loop;
+program FizzBuzz;
 
 var
   i: integer;
