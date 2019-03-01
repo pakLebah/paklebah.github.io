@@ -20,7 +20,7 @@ Di grup pemrograman [Pascal Indonesia][1], saya pernah sampaikan, *"Jangan sekal
 
 Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis program, bacalah terlebih dahulu buku panduan bahasa pemrograman yg digunakan. Tentu bacalah buku yg membahas versi bahasa yg terbaru dan masih digunakan saat ini, jangan versi *jadul* yg sudah tidak dipakai lagi. Misalnya jika belajar bahasa Pascal maka bacalah buku yg membahas [bahasa Pascal modern][2], jangan buku yg membahas bahasa *jadul* seperti [Turbo Pascal][3].
 
-<img align="left" style="margin: 10px 10px 200px 0" src="img/delphi_handbook.jpg">
+<img align="right" src="img/delphi_handbook.jpg">
 
 Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dipelajari:
 
