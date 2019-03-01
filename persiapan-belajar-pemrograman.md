@@ -18,7 +18,7 @@ Ini sudah saya jelaskan panjang lebar di buku kecil saya, [Bekal Belajar Pemrogr
 
 Di grup pemrograman [Pascal Indonesia][1], saya pernah sampaikan, *"Jangan sekali-kali menulis sebaris pun kode program jika belum paham tata cara penulisan bahasa pemrograman (syntax) yg digunakan."* Logikanya, bagaimana mungkin seseorang bisa menulis kode program dengan benar jika cara menulisnya saja belum tahu? Mustahil. Ibaratnya, kita ingin bicara dalam bahasa Inggris tapi kita tidak tahu sedikit pun kosakata dan tata bahasa Inggris. Apa mungkin bisa?
 
-Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis program, bacalah terlebih dahulu buku panduan bahasa pemrograman yg digunakan. Tentu bacalah buku yg membahas versi bahasa yg terbaru dan masih digunakan saat ini, jangan versi *jadul* yg sudah tidak dipakai lagi. Misalnya jika belajar bahasa Pascal maka bacalah buku yg membahas [bahasa Pascal modern][2], jangan buku yg membahas bahasa *jadul* seperti [Turbo Pascal][3].
+Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis program, bacalah terlebih dahulu buku panduan bahasa pemrograman yg digunakan. Tentu bacalah buku yg membahas versi bahasa yg terbaru dan masih digunakan saat ini, jangan versi *jadul* yg sudah tidak dipakai lagi. Misalnya belajar bahasa Pascal, bacalah buku yg membahas [bahasa Pascal modern][2], jangan buku yg membahas bahasa Pascal *jadul* seperti [Turbo Pascal][3].
 
 <img align="right" src="img/delphi_handbook.jpg">
 
