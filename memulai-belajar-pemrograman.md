@@ -1,4 +1,4 @@
-# Cara Belajar Pemrograman
+# Memulai Belajar Pemrograman
 
 > **A Word of Advice**
 >
