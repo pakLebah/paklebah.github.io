@@ -21,7 +21,7 @@ Kendala kebanyakan pembelajar pemrograman bukanlah kurangnya kemampuan, melainka
 
 Walaupun tidak ada bahasa pemrograman yg betul-betul terbaik, tapi tidak semua bahasa pemrograman cocok untuk pemula atau pembelajar. Bahasa pemrograman yg disarankan bagi pemula atau pembelajar sebaiknya yg memiliki sifat bahasa sebagai berikut:
 
-[![Watch the video](https://www.embarcadero.com/images/rad-studio/features/deep-source-code-repository-integration.png)](https://player.vimeo.com/video/300656745?autoplay=1&loop=1&title=0&byline=0&portrait=0&fun=0&background=1&muted=1)
+[![Delphi demo video.](img/delphi_rio_thumb.png)](https://player.vimeo.com/video/300656745)
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
