@@ -43,6 +43,9 @@ Semua panduan di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih me
 
 Menulis kode program tentu butuh aplikasi penyunting (*editor*), tapi bukan penyunting biasa seperti aplikasi Notepad. Gunakanlah aplikasi penyunting khusus pemrograman yg menyediakan fitur-fitur yg membantu dan memudahkan dalam menulis kode program, atau biasa disebut IDE (*integrated development environment* atau lingkungan pengembangan terpadu). Dan yg terpenting adalah harus menyediakan fitur dan alat bantu untuk [awakutu][9]. Fitur awakutu **sangat penting** bagi pemula. Pemula harus menghindari penyunting yg tidak menyediakan alat awakutu.
 
+> *"Seseorang tidak layak disebut pemrogram jika belum menguasai teknik awakutu (debugging)."*    
+> *~Pak Lebah*
+
 Untuk pengguna Free Pascal, hindari penyunting teks (*console*) bawaan Free Pascal. Sekarang sudah abad 21, gunakanlah penyunting grafis (GUI atau *graphical user interface*). Penyunting teks bawaan Free Pascal lebih ditujukan untuk pemrogram yg sudah pintar di lingkungan teks (CLI atau *command line interface*) dan fitur yg disediakan sangat terbatas sehingga sangat tidak cocok bagi pemula. Saya sarankan gunakan [Lazarus IDE][10] (untuk Free Pascal) atau [Delphi][14] yg memiliki banyak fitur canggih. Atau minimal, gunakanlah [Free Pascal dengan Visual Studio Code][11].
 
 [![Delphi demo video.](img/delphi_rio_thumb.png)](https://player.vimeo.com/video/300656745)
@@ -73,7 +76,7 @@ Berlatih membuat program apa? Apa saja. Pokoknya buatlah program dengan bahasa y
 
 * **Bermain *game* dengan program.** Siapa bilang belajar pemrograman tidak bisa dengan *game*? Bayangkan anda bermain perang-perangan di luar angkasa dengan pesawat luar angkasa, tapi... pesawatnya tidak dikendalikan dengan tombol atau tetikus, melainkan dengan kode program. Menarik bukan? Silakan mencobanya di [CodinGame][17].
 
-## 7.
+## 7. Bergabung dengan Komunitas Pemrograman
 
 Nah, apakah anda juga seorang pemula atau berniat belajar pemrograman? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][1]. Selamat belajar!
 
