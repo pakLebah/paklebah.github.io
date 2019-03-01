@@ -91,7 +91,13 @@ Berlatih membuat program apa? Apa saja. Pokoknya buatlah program dengan bahasa y
 
 ## 7. Bergabung dengan Komunitas Pemrograman
 
-Nah, apakah anda juga seorang pemula atau berniat belajar pemrograman? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][4]. Selamat belajar!
+Belajar pemrograman akan sangat terbantu jika ada tempat bertanya saat ada kesulitan dan buku yg tersedia tidak mampu memberi jawaban. Seorang pemula sebaiknya bergabung dengan komunitas pemrograman sesuai dengan bahasa yg sedang dipelajarinya. Umumnya dalam komunitas selalu ada orang-orang yg bersedia membantu ketika ada orang yg bertanya dan membutuhkan arahan dan solusi. Namun jangan lupa bahwa selalu ada etika dalam bergaul, termasuk dalam komunitas daring. Hal ini sudah saya jelaskan juga dalam buku kecil saya, [Bekal Belajar Pemrograman][3].
+
+Komunitas seharusnya tidak hanya sebagai tempat bertanya, namun juga tempat berbagi pengetahuan dan karya sesama anggotanya. Interaksi dalam komunitas itu bukan hanya tanya-jawab dua arah saja, tapi multi-arah yaitu banyak orang berbagi ke orang banyak. Seorang pemula juga berhak dan perlu berbagi pengetahuan yg sudah dipahaminya atau karya yg sudah dibuatnya ke komunitas. Menjadi pemula bukan alasan untuk tidak berbagi.
+
+Setiap kali pemula berhasil membuat sebuah program, apa pun itu, perlu dirayakan dengan membagikannya ke komunitas. Tidak perlu malu berbagi karya walaupun mungkin dianggap sederhana. Berbagi karya itu akan membangun rasa percaya diri pemula. Dan rasa percaya diri itu penting untuk membangun semangat belajar. Dalam komunitas yg baik, siapa pun yg berbagi karya apa pun, pasti akan dihargai dan disemangati untuk berkarya yg lebih baik lagi.
+
+Nah, apakah anda juga seorang pemula? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][4]. Selamat belajar!
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/8).  
