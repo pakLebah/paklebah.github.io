@@ -42,8 +42,28 @@ Untuk pengguna Free Pascal, hindari penyunting teks (*console*) bawaan Free Pasc
 
 [![Delphi demo video.](img/delphi_rio_thumb.png)](https://player.vimeo.com/video/300656745)
 
+## 5. Luangkan Waktu Untuk Berlatih Secara Rutin
+
+Pemrograman selain merupakan ilmu, juga menerupakan keahlian (*skill*). Yg namanya keahlian perlu dilatih secara terus-menerus untuk menjaga, mengasah, dan meningkatkan kemampuan yg dimiliki. Membaca buku saja, sebanyak apa pun buku yg dibaca, tidak akan membuat pemula menjadi pemrogram yg ahli. Sama seperti belajar berenang, membaca selemari buku teknik berenang, tidak akan membuat kita mendadak jadi perenang yg andal.
+
+Pemrogram yg sudah jago pun akan menurun keahliannya jika lama tidak membuat program. Apalagi pemula, harus selalu luangkan waktu secara rutin untuk membangun kemampuan. Saran saya minimal berlatih seminggu sekali, misalnya sehari di akhir pekan digunakan khusus untuk berlatih pemrograman. Jika seorang pemula betul-betul ingin menjadi pemrogram yg andal, maka jadwalkan latihan rutin dan lakukan secara disiplin.
+
+Berlatih apa? Apa saja, pokoknya buatlah program dengan bahasa yg sedang dipelajari. Tidak usah bikin program yg muluk-muluk atau yg rumit, mulai dari yg sederhana saja dulu, sesuaikan dengan tingkat kemampuan yg sudah dipelajari. Supaya berlatihnya tidak membosankan, ada beberapa materi yg cocok untuk latihan pemula, yaitu:
+
+<img align="right" src="https://raw.githubusercontent.com/git-bee/gaple/master/gaple.gif">
+
+* **Olah matematika.** Berlatih matematika penting untuk mengasah kemampuan logika numerik pemrogram. Bisa dimulai dengan menyelesaikan soal-soal di situs [Project Euler][15], mulailah dari soal-soal yg mudah.
+
+* **Olah grafis sederhana.** Berlatih grafis penting untuk mengasah kemampuan logika visual pemrogram. Bisa dimulai dengan membuat fraktal, penampil persamaan matematik, animasi partikel, dsb. Kreatiflah.
+
+* **Membuat *game* sederhana.** Berlatih membuat *game* penting untuk mengasah kemampuan membangun aplikasi yg terpadu sebab *game* melibatkan hampir seluruh kemampuan pemrograman, mulai dari matematika, visual, interaksi, antarmuka, olah data, dan memadukan semuanya menjadi sebuah permainan yg menarik. Mulailah dari *game* yg sederhana, misalnya Tic Tac Toe, atau Dakon, atau Silang Pentol, atau [Gaple][16], dan sebagainya.
+
+* **Bermain *game* dengan program.** Siapa bilang belajar pemrograman tidak bisa dengan *game*? Bayangkan anda bermain perang-perangan di luar angkasa dengan pesawat luar angkasa, tapi... pesawatnya tidak dikendalikan dengan tombol atau tetikus, melainkan dengan kode program. Menarik bukan? Silakan mencobanya di [CodinGame][17].
+
+Nah, apakah anda juga seorang pemula atau berniat belajar pemrograman? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][1]. Selamat belajar!
+
 ———  
-💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/8).  
 Thank you. 😊
 
 ---
@@ -63,3 +83,6 @@ Thank you. 😊
 [12]: https://paklebah.github.io/bahasa-pemrograman-pemula.html
 [13]: https://pak.lebah.web.id/ebook/pascal.id_kulgram1.pdf
 [14]: https://www.embarcadero.com/products/delphi
+[15]: https://projecteuler.net/archives
+[16]: https://github.com/git-bee/gaple
+[17]: https://www.codingame.com/
