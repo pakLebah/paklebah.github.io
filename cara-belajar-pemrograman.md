@@ -97,6 +97,8 @@ Komunitas seharusnya tidak hanya sebagai tempat bertanya, namun juga tempat berb
 
 Setiap kali pemula berhasil membuat sebuah program, apa pun itu, perlu dirayakan dengan membagikannya ke komunitas. Tidak perlu malu berbagi karya walaupun mungkin dianggap sederhana. Berbagi karya itu akan membangun rasa percaya diri pemula. Dan rasa percaya diri itu penting untuk membangun semangat belajar. Dalam komunitas yg baik, siapa pun yg berbagi karya apa pun, pasti akan dihargai dan disemangati untuk berkarya yg lebih baik lagi.
 
+[![Pascal Indonesia](img/pascal.id.banner.png)](https://www.facebook.com/groups/pascal.id/)
+
 Nah, apakah anda juga seorang pemula? Anda boleh ikuti saran-saran saya di atas. Dan saya tunggu karya anda di grup [Pascal Indonesia][4]. Selamat belajar!
 
 ———  
