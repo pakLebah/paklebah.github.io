@@ -138,7 +138,7 @@ Menurut saya, jawaban untuk pertanyaan di atas adalah **bahasa Pascal**. Namun b
 6. Tersedia banyak sumber pembelajaran? ✔︎ Terpenuhi.
 7. Mempunyai komunitas pemrogram yg besar? ✔︎ Terpenuhi.
 
-Jelas bahasa Pascal bisa memenuhi semua sifat bahasa yg cocok bagi pemula. Bisa jadi itu sebabnya bahasa Pascal masih diajarkan di banyak sekolah dan kampus di berbagai belahan dunia hingga hari ini, khususnya di kawasan Asia dan Eropa Timur, termasuk di Indonesia. Para akademisi di kawasan tersebut tentu memahami berbagai kelebihan bahasa Pascal sehingga memutuskan Pascal tetap diajarkan di jalur pendidikan formal.
+Jelas bahasa Pascal bisa memenuhi semua sifat bahasa yg cocok bagi pemula. Bisa jadi itu sebabnya bahasa Pascal masih diajarkan di banyak sekolah dan kampus di berbagai belahan dunia hingga hari ini, khususnya di kawasan Asia, Amerika Selatan, dan Eropa Timur, termasuk di Indonesia. Para akademisi di kawasan tersebut tentu memahami berbagai kelebihan bahasa Pascal sehingga memutuskan Pascal tetap diajarkan di jalur pendidikan formal.
 
 Pokok dari ilmu pemrograman adalah algoritma, bukan bahasanya. Algoritma yg sama bisa diterapkan di berbagai bahasa yg berbeda. Konsep dan prinsip pemrograman pun sama saja walaupun penerapannya berbeda di berbagai bahasa. Jika seorang pemrogram telah memahami konsep dan prinsip pemrograman serta menguasai satu bahasa pemrograman dengan baik, maka belajar bahasa kedua akan lebih mudah daripada saat belajar bahasa pertama (saat masih pemula). Dengan demikian, pemula tidak perlu khawatir untuk memulai belajar pemrograman dari bahasa yg cocok bagi pemula walaupun mungkin bahasa tersebut kurang populer di dunia kerja.
 
