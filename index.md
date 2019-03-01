@@ -4,7 +4,7 @@
 > ~Mr Bee*
 
 #### March, 2019:
-* [Cara Belajar Pemrograman](cara-belajar-pemrograman.md)
+* [Memulai Belajar Pemrograman](memulai-belajar-pemrograman.md)
 
 #### February, 2019:
 * [Bahasa Pemrograman Untuk Pemula](bahasa-pemrograman-pemula.md)
