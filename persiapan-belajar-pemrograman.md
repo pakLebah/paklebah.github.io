@@ -14,7 +14,7 @@ Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis pr
 
 <img align="left" style="margin: 10px 10px 10px 0" src="img/delphi_handbook.jpg">
 
-Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dibaca:
+Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dipelajari:
 
 • Buku [*Essential Pascal*][6] oleh Marco Cantù.    
 • Buku [*Object Pascal Handbook*][7] oleh Marco Cantù.    
@@ -22,7 +22,9 @@ Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan 
 • Dokumen wiki [Free Pascal dan Lazarus IDE][5].    
 • Dokumen wiki [Delphi][8] dari Embarcadero.
 
-> **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa Pascal modern dengan tingkat kompatibilitas yg cukup tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa diterapkan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
+> **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
+
+Jika bahasa Inggris jadi kendala, saya sarankan belajar bahasa Inggris lebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya.
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/7).  
