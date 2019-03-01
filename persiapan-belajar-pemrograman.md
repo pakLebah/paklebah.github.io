@@ -24,11 +24,11 @@ Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis pr
 
 Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dipelajari:
 
-• Buku [*Essential Pascal*][6] oleh Marco Cantù.    
-• Buku [*Object Pascal Handbook*][7] oleh Marco Cantù.    
-• Dokumen panduan resmi [Free Pascal][4].    
-• Dokumen wiki [Free Pascal dan Lazarus IDE][5].    
-• Dokumen wiki [Delphi][8] dari Embarcadero.
+* Buku [*Essential Pascal*][6] oleh Marco Cantù.
+* Buku [*Object Pascal Handbook*][7] oleh Marco Cantù.
+* Dokumen panduan resmi [Free Pascal][4].
+* Dokumen wiki [Free Pascal dan Lazarus IDE][5].
+* Dokumen wiki [Delphi][8] dari Embarcadero.
 
 > **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa (*Object*) Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
 
