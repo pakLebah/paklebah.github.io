@@ -3,6 +3,9 @@
 > *"I'm not writing computer program, I'm writing digital poetry."    
 > ~Mr Bee*
 
+#### March, 2019:
+* [Cara Belajar Pemrograman](cara-belajar-pemrograman.md)
+
 #### February, 2019:
 * [Bahasa Pemrograman Untuk Pemula](bahasa-pemrograman-pemula.md)
 * [Mengenal Awakutu](mengenal-awakutu.md)
