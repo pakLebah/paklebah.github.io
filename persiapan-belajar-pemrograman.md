@@ -20,7 +20,7 @@ Di grup pemrograman [Pascal Indonesia][1], saya pernah sampaikan, *"Jangan sekal
 
 Panduan bahasa pemrograman umumnya berupa buku (cetak). Sebelum mulai menulis program, bacalah terlebih dahulu buku panduan bahasa pemrograman yg digunakan. Tentu bacalah buku yg membahas versi bahasa yg terbaru dan masih digunakan saat ini, jangan versi *jadul* yg sudah tidak dipakai lagi. Misalnya jika belajar bahasa Pascal maka bacalah buku yg membahas [bahasa Pascal modern][2], jangan buku yg membahas bahasa *jadul* seperti [Turbo Pascal][3].
 
-<img align="left" style="margin: 10px 10px 10px 0" src="img/delphi_handbook.jpg">
+<img align="left" style="margin: 10px 10px 200px 0" src="img/delphi_handbook.jpg">
 
 Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan dalam bentuk buku digital (*ebook*) yg tersedia daring justru lebih mudah didapatkan. Bisa juga tersedia dalam bentuk wiki yg dilengkapi dengan fitur pencarian. Berikut beberapa panduan bahasa Pascal yg bisa dipelajari:
 
@@ -32,7 +32,7 @@ Namun jaman sekarang, buku panduan tidak harus dalam bentuk buku cetak. Panduan 
 
 > **Catatan**: Free Pascal dan Delphi adalah sama-sama dialek bahasa (*Object*) Pascal modern dengan tingkat kompatibilitas yg tinggi (lebih dari 90%). Bagi pemula keduanya bisa dibilang sama saja. Buku panduan Delphi bisa digunakan di Free Pascal, dan sebaliknya. Perbedaan keduanya baru muncul pada kemampuan bahasa Pascal tingkat menengah ke atas.
 
-Semua panduan di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya.
+Semua panduan di atas ditulis dalam bahasa Inggris. Jika bahasa Inggris masih menjadi kendala, silakan belajar bahasa Inggris terlebih dahulu. Pemrograman adalah ilmu yg berasal dari negeri yg berbahasa Inggris, jika ingin paham ilmunya maka harus paham bahasanya. Walaupun tersedia buku cetak dalam bahasa Indonesia, umumnya isi buku sudah cukup jauh tertinggal sehingga pemula tidak bisa menikmati fitur-fitur bahasa terbaru yg lebih canggih.
 
 ## 4. Pasang Aplikasi Penyunting atau IDE
 
