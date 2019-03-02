@@ -13,7 +13,7 @@
 > —————    
 > *Inspired by "[**Everyone Can Code**][1]" book from Apple.*
 
-Belajar pemrograman itu memang sulit, tapi semua orang bisa melakukannya. Pemrograman adalah ilmu berpikir. Dan ilmu berpikir adalah salah satu kemampuan dasar manusia, sama seperti membaca, menulis, dan berhitung. Semua orang pasti bisa memahaminya jika mau belajar dengan baik dan tekun. Sama seperti belajar sepeda itu sulit, bahkan seringkali sampai jatuh dan terluka, tapi toh semua orang bisa melakukannya.
+Belajar pemrograman itu memang sulit, tapi semua orang bisa melakukannya. Pemrograman adalah ilmu berpikir. Dan ilmu berpikir adalah salah satu kemampuan dasar manusia, sama seperti membaca, menulis, dan berhitung. Semua orang pasti bisa memahaminya jika mau belajar dengan baik dan tekun. Sama seperti belajar bersepeda itu sulit, bahkan seringkali sampai jatuh dan terluka, tapi toh semua orang bisa melakukannya.
 
 Kendala kebanyakan pembelajar pemrograman bukanlah kurangnya kemampuan, melainkan lebih karena cara belajar yg kurang tepat. Sama seperti belajar hal apa pun, ada cara-cara tertentu yg khusus untuk belajar pemrograman. Belajar pemrograman tidak sama caranya dengan belajar ilmu sejarah, atau ilmu ekonomi, atau ilmu biologi, dan lain-lain. Pembelajar pemrograman harus paham bagaimana cara belajar pemrograman yg tepat agar mencapai pemahaman dan kemampuan yg optimal. Bagaimana caranya?
 
