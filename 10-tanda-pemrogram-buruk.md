@@ -24,12 +24,15 @@ Namun setiap bahasa dan alat pemrograman selalu menyertakan dokumentasi yg menje
 
 Belajar pemrograman memang tidak mudah. Pemrogram akan selalu dihadapkan pada masalah-masalah karena tugas pemrogram memang menyelesaikan masalah (dengan program komputer). Satu masalah selesai, masalah lain sudah siap menunggu. Seringkali ada masalah yg sangat sulit ditemukan jalan keluarnya, bahkan setelah berhari-hari dipikirkan. Oleh sebab itu pemrogram yg andal harus tangguh menghadapi masalah dan mencari jalan keluarnya.
 
-Tidak pernah ada kisah pemrogram membuat aplikasi dan langsung jadi tanpa masalah apa pun, kecuali program [*"Hello World"*][2]. Pemrogram yg andal akan menganggap masalah yg sulit dipecahkan sebagai tantangan sehingga berusaha menyelesaikannya. Sementara pemrogram yg buruk akan menganggap masalah sebagai hambatan sehingga merasa tertekan dan kemudian menyerah. Namun dari masalah itulah sebenarnya pemrogram bisa belajar banyak hal.
+Tidak pernah ada kisah pemrogram membuat aplikasi dan langsung jadi tanpa masalah apa pun, kecuali program [*"Hello World"*][2]. Pemrogram yg andal akan menganggap masalah yg sulit dipecahkan sebagai tantangan sehingga berusaha menyelesaikannya. Sementara pemrogram yg buruk akan menganggap masalah sebagai hambatan sehingga merasa tertekan lalu menyerah. Namun dari masalah itulah sebenarnya pemrogram bisa belajar banyak hal.
 
 Kesabaran (*patience*), kepercayaan-diri (*confidence*) dan ketahanan (*persistence*) mental dan pikiran sangat penting bagi pemrogram agar mampu terus menyelesaikan segala masalah yg muncul.
 
 ## 4. Kurang Menghargai Pencapaian Diri Sendiri
 
+Menyelesaikan masalah seringkali menghabiskan energi yg cukup besar. Pemrogram yg punya motivasi kuat dan tidak mudah menyerah akan menghasilkan rasa gembira luar biasa ketika mampu menyelesaikan sebuah masalah yg rumit. Sensasi ini tidak bisa dibuat-buat dan akan tampak sejak masih pemula. 
+
+Jika anda seorang pemula... Rayakanlah kesuksesan kecil yg berhasil diraih. Pamerkanlah pada dunia apa yg sudah berhasil dibuat
 
 
 ———  
