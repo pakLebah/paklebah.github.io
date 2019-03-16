@@ -4,6 +4,7 @@
 > ~Mr Bee*
 
 #### March, 2019:
+* [10 Tanda Calon Pemrogram Yg Buruk](10-tanda-pemrogram-buruk.md)
 * [Memulai Belajar Pemrograman](memulai-belajar-pemrograman.md)
 
 #### February, 2019:

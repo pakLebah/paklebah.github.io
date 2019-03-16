@@ -46,7 +46,7 @@ Ini adalah salah satu ciri yg paling tampak di seorang pemula. Program komputer 
 
 Dengan demikian, jika pemrogram malas berpikir untuk mencari solusi maka program yg dihasilkan juga akan buruk. Atau bahkan akan gagal sama sekali. Umumnya ini karena pemula belum paham prinsip ini:
 
-> Komputer menjalankan apa yg kita perintahkan, bukan melakukan apa yg kita inginkan.
+> *Komputer menjalankan apa yg kita perintahkan, bukan melakukan apa yg kita inginkan.*
 
 Komputer tidak bisa memahami apa yg kita inginkan sebab komputer bukan dukun yg bisa membaca pikiran manusia. Yg bisa dipahami komputer adalah kode program yg berisi perintah cara melakukan suatu pekerjaan secara langkah demi langkah. Menentukan perintah langkah demi langkah itulah yg sering menjadi kendala bagi pemrogram, terutama yg masih pemula.
 
@@ -74,10 +74,10 @@ Pemrograman adalah ilmu yg berasal dari negeri lain, negeri yg bahasa utamanya a
 
 Jika seorang pemula pemrograman enggan belajar bahasa Inggris maka bisa dipastikan proses belajarnya akan lebih lama dan karirnya akan lambat. Pemula yg belum paham bahasa Inggris sebaiknya belajar bahasa Inggris lebih dulu sebelum mulai belajar pemrograman.
 
-Demikian 10 tanda calon pemrogram yg buruk dan kurang andal. Jika anda seorang pemula dan memiliki salah satu atau sebagian ciri-ciri di atas maka sekarang adalah saatnya untuk membenahi diri. Atau boleh juga mulai pertimbangkan untuk belajar yg lain saja.
+Demikian 10 tanda calon pemrogram yg buruk dan kurang andal. Jika anda seorang pemula dan memiliki salah satu atau sebagian ciri-ciri di atas maka sekarang adalah saatnya untuk berbenah diri. Atau boleh juga mulai pertimbangkan untuk belajar yg lain saja.
 
 ———  
-💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/9).  
 Thank you. 😊
 
 ---
