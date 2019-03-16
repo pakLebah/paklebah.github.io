@@ -10,7 +10,7 @@ Kemudian saya bagikan berkas-berkas pengaturan VS Code yg saya gunakan sehingga 
 
 Namun rupanya semua itu belum cukup jelas. Masih ada beberapa anggota grup Pascal.ID yg bertanya tentang bagaimana cara menulis program Pascal di VS Code. Karena itu, saya kemudian menulis artikel ini.
 
-Baiklah… pertama, saya anggap anda sekalian sudah memasang (*install*) aplikas VS Code, ya. Jika belum terpasang, silakan unduh VS Code di [sini][12], lalu ikuti panduan cara memasangnya di [sini][13]. Silakan.
+Baiklah… pertama, saya anggap anda sekalian sudah memasang (*install*) aplikasi VS Code, ya. Jika belum terpasang, silakan unduh VS Code di [sini][12], lalu ikuti panduan cara memasangnya di [sini][13]. Silakan.
 
 ## Pemasangan Free Pascal
 
