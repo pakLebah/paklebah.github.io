@@ -30,10 +30,51 @@ Kesabaran (*patience*), kepercayaan-diri (*confidence*) dan ketahanan (*persiste
 
 ## 4. Kurang Menghargai Pencapaian Diri Sendiri
 
-Menyelesaikan masalah seringkali menghabiskan energi yg cukup besar. Pemrogram yg punya motivasi kuat dan tidak mudah menyerah akan menghasilkan rasa gembira luar biasa ketika mampu menyelesaikan sebuah masalah yg rumit. Sensasi ini tidak bisa dibuat-buat dan akan tampak sejak masih pemula. 
+Menyelesaikan masalah seringkali menghabiskan energi yg cukup besar. Pemrogram yg punya motivasi kuat dan tidak mudah menyerah akan menghasilkan rasa gembira luar biasa ketika mampu menyelesaikan sebuah masalah yg rumit. Sensasi ini tidak bisa dibuat-buat dan akan tampak sejak masih pemula. Merayakan kesuksesan kecil secara sederhana mungkin tampak sepele, tapi itu penting untuk membangun rasa percaya diri, terutama bagi pemula.
 
-Jika anda seorang pemula... Rayakanlah kesuksesan kecil yg berhasil diraih. Pamerkanlah pada dunia apa yg sudah berhasil dibuat
+Jika anda seorang pemula, rayakanlah kesuksesan kecil yg berhasil anda raih. Pamerkanlah pada dunia apa yg sudah berhasil anda buat. Tunjukkan di media sosial anda dan komunitas tempat anda bergabung. Tidak perlu malu atau takut dibilang apa pun karena semua orang **pasti** pernah menjadi pemula. Tidak ada pemrogram yg jago dari lahir, semuanya harus melewati masa sebagai pemula.
 
+## 5. Kurang Sabar dan Tekun Dalam Belajar
+
+Teknologi komputer memang berkembang sangat cepat. Nyaris setiap minggu muncul perkembangan teknologi baru. Namun yg namanya proses belajar, tidak ada yg *instant* (seketika). Jangan terburu-buru memahami materi yg sedang dipelajari. Pelajarilah secara seksama, latihlah ilmu yg baru diperoleh, hingga betul-betul paham. Jangan berharap hanya membaca sekali lalu mencoba sekali maka akan langsung paham.
+
+Pemula yg ingin segera jadi pintar biasanya justru akan gagal dalam belajar. Rasa terburu-buru membuat kita tidak bisa menjalani proses belajar dengan baik. Sebaiknya nikmatilah proses belajarnya. Buat lingkungan belajar yg nyaman dan bikin betah. Bikin materi latihan yg menarik bagi anda. Buatlah pemrograman sebagai hal yg menyenangkan. *Make it fun and do it happily.*
+
+## 6. Malas Berpikir
+
+Ini adalah salah satu ciri yg paling tampak di seorang pemula. Program komputer adalah wujud dari proses berpikir secara sistematis dan terstruktur. Seperti yg saya jelaskan di buku [Bekal Belajar Pemrograman][3], pemrogram harus menganggap komputer itu barang mati yg bodoh. Faktanya memang begitu. Perangkat lunak yg dibuat pemrogramlah yg membuat komputer menjadi seolah pintar karena hasil pikiran pemrogram berwujud menjadi aplikasi komputer.
+
+Dengan demikian, jika pemrogram malas berpikir untuk mencari solusi maka program yg dihasilkan juga akan buruk. Atau bahkan akan gagal sama sekali. Umumnya ini karena pemula belum paham prinsip ini:
+
+> Komputer menjalankan apa yg kita perintahkan, bukan melakukan apa yg kita inginkan.
+
+Komputer tidak bisa memahami apa yg kita inginkan sebab komputer bukan dukun yg bisa membaca pikiran manusia. Yg bisa dipahami komputer adalah kode program yg berisi perintah cara melakukan suatu pekerjaan secara langkah demi langkah. Menentukan perintah langkah demi langkah itulah yg sering menjadi kendala bagi pemrogram, terutama yg masih pemula.
+
+## 7. Cara Berpikir Tidak Terstruktur
+
+Seperti yg disebutkan sebelumnya, pemrogram harus mampu berpikir secara sistematis dan terstruktur. Jadi, berpikir saja tidak cukup. Banyak pemula yg sebenarnya suka berpikir, tapi berpikirnya kurang rapi dan tidak terstruktur serta kurang fokus. Alhasil, solusi bisa jadi diperoleh tetapi solusinya tidak efektif dan efisien. Sesuatu yg seharusnya bisa diselesaikan dalam 3 langkah –misalnya– menjadi 10 langkah.
+
+Mungkin belum terlalu jadi masalah saat masih pemula. Namun jika anda serius akan berkarir sebagai pemrogram profesional, anda harus memperbaiki cara berpikir supaya lebih runut (berurutan) dan runtun (berkaitan) sehingga kode program yg dihasilkan adalah solusi yg efektif dan efisien. Di dunia nyata, aplikasi komputer yg dibuat tidak hanya bisa bekerja dengan benar tapi juga harus bekerja dengan optimal.
+
+## 8. Tidak Teliti dan Rapi
+
+Tidak seperti bahasa manusia yg cair dan dinamis, bahasa pemrograman itu bahasa yg sangat kaku. Jangankan salah ketik (*typo*), sekadar kurang koma saja maka program bisa menghasilkan yg berbeda atau bahkan sama sekali tidak bisa bekerja. Pemula biasanya sangat lemah dalam hal ini. Umumnya disebabkan karena masih belum terbiasa menulis program dengan aturan penulisan (sintaks) yg kaku.
+
+Maka sejak awal belajar sebaiknya mulai dibiasakan menulis program dengan rapi dan teliti. Perhatikan setiap tanda baca dalam sintaks, penamaan variabel yg baik, tertib dalam menata kode program (indentasi, besar-kecil huruf, peletakan spasi, dsb), rapi dalam menata tampilan, dan hal-hal kecil lain yg mungkin tampak sepele. Kadang hal-hal kecil yg sepele itu bisa jadi sumber kesalahan (kutu) yg sulit ditemukan.
+
+## 9. Berharap Solusi yg Terbaik
+
+Mencari solusi dari suatu masalah mirip dengan mencari jawaban dari pertanyaan *"apa bahasa pemrograman yg terbaik?".* Jawabannya adalah tergantung. Bisa jadi ada banyak solusi yg bisa digunakan untuk menjawab satu permasalahan. Solusi yg terbaik adalah solusi yg paling cocok untuk situasi, kondisi, dan lingkungan tempat solusi itu diterapkan. Solusi terbaik adalah kompromi paling tepat dalam situasi, kondisi, dan lingkungan yg ada.
+
+Demikian juga dalam pemrograman. Bisa ada 1000 algoritma untuk menjawab 1 masalah, yg semuanya bisa sama-sama benar. Jangan berpikir bahwa masalah ini penyelesaiannya **harus** begini. Maka tidak alasan bagi pemula untuk meniru (*copy-paste*) solusi orang lain apa adanya tanpa pemahaman yg baik. Sebisa mungkin buatlah sendiri kode program yg dibutuhkan walaupun solusinya terinspirasi dari orang lain atau solusi lain.
+
+## 10. Tidak Paham Bahasa Inggris
+
+Pemrograman adalah ilmu yg berasal dari negeri lain, negeri yg bahasa utamanya adalah bahasa Inggris. Sebagian besar sumber daya belajar pemrograman menggunakan bahasa Inggris. Walaupun ada yg menerjemahkannya ke bahasa Indonesia tapi jumlahnya tidak banyak dan kadang kurang kekinian (tidak *up to date*). Maka pemahaman bahasa Inggris bagi setiap pemrogram itu wajib hukumnya. Minimal bisa membaca dan menulis dalam bahasa Inggris.
+
+Jika seorang pemula pemrograman enggan belajar bahasa Inggris maka bisa dipastikan proses belajarnya akan lebih lama dan karirnya akan lambat. Pemula yg belum paham bahasa Inggris sebaiknya belajar bahasa Inggris lebih dulu sebelum mulai belajar pemrograman.
+
+Demikian 10 tanda calon pemrogram yg buruk dan kurang andal. Jika anda seorang pemula dan memiliki salah satu atau sebagian ciri-ciri di atas maka sekarang adalah saatnya untuk membenahi diri. Atau boleh juga mulai pertimbangkan untuk belajar yg lain saja.
 
 ———  
 💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/1).  
@@ -44,3 +85,4 @@ Thank you. 😊
 
 [1]: https://google.com
 [2]: http://helloworldcollection.de
+[3]: https://pak.lebah.web.id/ebook/pascal.id_kulgram1.pdf
