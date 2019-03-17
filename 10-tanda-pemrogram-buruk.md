@@ -1,5 +1,7 @@
 # 10 Tanda Calon Pemrogram Yang Buruk
 
+![Pemrogram](https://www.filepicker.io/api/file/UCDr0K3lQXGDjOqvHHsL)
+
 > "Apakah saya bisa menjadi pemrogram yg andal?"
 
 Pertanyaan di atas sering saya terima dari pemula yg baru belajar pemrograman. Walaupun saya sepakat bahwa setiap orang bisa membuat program (*everyone can code*), tapi saya tidak sepakat bila setiap orang bisa menjadi pemrogram yg andal. Sama seperti setiap orang bisa paham matematika, tetapi tidak semua orang mampu menjadi ahli matematika. Dari sejak pemula, sebenarnya sudah bisa diperkirakan apakah yg bersangkutan bisa menjadi pemrogram yg andal atau tidak. Saya melihat ada 10 tanda seorang pemula yg kemungkinan akan menjadi pemrogram yg buruk. Apa saja cirinya?
