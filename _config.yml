@@ -11,3 +11,5 @@ favicon :
     enabled : true
     full_url : https://assets-cdn.github.com/favicon.ico
     type : ico
+plugins :
+  - jekyll-seo-tag
