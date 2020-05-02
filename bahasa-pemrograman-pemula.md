@@ -99,7 +99,7 @@ begin
 end.
 ```
 
-Bagi pemrogram yg terbiasa dengan bahasa C++ misalnya, kode program bahasa Pascal di atas terkesan bertele-tele (*verbose*). Tapi bagi pemula, tata bahasa Pascal di atas memaksa untuk disiplin dalam penulisan kode program. Dari baris pertama sudah jelas bahwa berkas ini berisi program utama bernama `Loop`, ada blok deklarasi variabel dengan penanda `var`, blok kumpulan perintah ada dalam pasangan penanda `begin`...`end;`, serta program utama ada dalam pasangan penanda `begin`...`end`.
+Bagi pemrogram yg terbiasa dengan bahasa C++ misalnya, kode program bahasa Pascal di atas terkesan bertele-tele (*verbose*). Tapi bagi pemula, tata bahasa Pascal di atas memaksa untuk disiplin dalam penulisan kode program. Dari baris pertama sudah jelas bahwa berkas ini berisi program utama bernama `FizzBuzz`, ada blok deklarasi variabel dengan penanda `var`, blok kumpulan perintah ada dalam pasangan penanda `begin`...`end;`, serta program utama ada dalam pasangan penanda `begin`...`end`.
 
 Bahkan bagi orang yg belum pernah menulis program komputer, contoh kode program dengan bahasa Pascal di atas lebih mudah dimengerti daripada contoh kode program dengan bahasa lainnya di atas. Itulah sebabnya saya katakan, menulis kode program dalam bahasa Pascal itu seperti menulis puisi.
 
