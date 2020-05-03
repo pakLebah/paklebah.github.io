@@ -87,7 +87,7 @@ var
 begin
   for i := 1 to 100 do
   begin
-    if if (i mod 3 = 0) and (i mod 5 = 0) then
+    if (i mod 3 = 0) and (i mod 5 = 0) then
       writeln('Fizz')
     else if i mod 5 = 0 then
       writeln('Buzz')
