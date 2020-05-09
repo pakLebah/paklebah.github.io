@@ -64,7 +64,7 @@ Selamat ulang tahun, Delphi! 🎂🥳
 > **Catatan:** Saya menulis ini hanya berbekal ingatan saja. Jika ada salah atau kurang, mohon koreksinya di kolom komentar. Terima kasih.
 
 ———  
-💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/9).  
+💬 I welcome your comment [here](https://github.com/pakLebah/paklebah.github.io/issues/10).  
 Thank you. 😊
 
 ---
