@@ -16,7 +16,7 @@ Secara umum Delphi 1 disambut baik di dunia pemrograman, terutama oleh pemrogram
 
 ## DELPHI 5
 
-![Delphi 5](img/delphi_5.png)
+![Delphi 5](img/delphi_5.gif)
 
 Delphi terus berkembang hingga Delphi versi 5, yg dilepas pada tahun 1999, mulai melawan dominasi Visual Basic. Dengan slogan *“as easy as VB, as fast as C”* (semudah VB, secepat C) dan *“VB killer”* yg memang sesuai kenyataan karena Delphi adalah alat RAD yg menghasilkan kode *native* untuk Windows 32 bit tanpa perlu *external runtime* seperti Visual Basic. Proses kompilasinya juga lebih cepat dibanding VB dan C/C++.
 
