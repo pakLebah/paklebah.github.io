@@ -55,7 +55,7 @@ Embarcadero, pemilik Delphi yg baru, sedikit mengubah strategi penjualan Delphi.
 
 Di sisi lain, penggemar individu mulai beralih ke alat atau bahasa lainnya. Apalagi era 2010-an adalah masa ramai munculnya alat-alat dan bahasa pemrograman baru yg tersedia gratis dan kode terbuka. Di pangsa individu, Delphi (sebagai produk) semakin dilupakan. Alternatif yg paling dekat bagi mantan pengguna Delphi adalah [Free Pascal][3] (*compiler*) dan [Lazarus IDE][4], keduanya gratis dan kode terbuka, yg 99% selaras (*compatible*) dengan Delphi dan VCL-nya. Saya beralih sejak Delphi 9.
 
-Namun tiba-tiba ada kejutan dari Embarcadero, yaitu dilepasnya *"RAD Studio: Community Edition”* di akhir 2018 yg lalu. *Community Edition* adalah versi gratis dari RAD Studio, tentu termasuk *Delphi Community Edition* (Delphi CE). Gebrakan ini cukup menghebohkan jagad Pascal dunia. Pemrogram Pascal sedunia ramai-ramai mengunduh dan mencoba Delphi CE. Ulasan secara umum mengatakan Delphi CE sangat bagus dan cukup memenuhi kebutuhan pemrogram Pascal masa kini. Satu-satunya batasan Delphi CE adalah tidak mendukung *platform* Linux (hanya tersedia di versi berbayar).
+Namun tiba-tiba ada kejutan dari Embarcadero, yaitu dilepasnya *"RAD Studio: Community Edition”* di akhir 2018 yg lalu. *Community Edition* adalah versi gratis dari RAD Studio, tentu termasuk *[Delphi Community Edition][5]* (Delphi CE). Gebrakan ini cukup menghebohkan jagad Pascal dunia. Pemrogram Pascal sedunia ramai-ramai mengunduh dan mencoba Delphi CE. Ulasan secara umum mengatakan Delphi CE sangat bagus dan cukup memenuhi kebutuhan pemrogram Pascal masa kini. Satu-satunya batasan Delphi CE adalah tidak mendukung *platform* Linux (hanya tersedia di versi berbayar).
 
 Tampaknya Embarcadero mulai memberi perhatian pada pangsa pasar individu. Bahasa Pascal atau Delphi mulai kembali diperbincangkan di dunia pemrograman daring. Walaupun boleh dibilang cukup terlambat tapi kita harus tetap apresiasi Embarcadero atas Delphi CE. Diharapkan Delphi CE bisa kembali mengangkat nama besar bahasa Pascal seperti di masa jaya Turbo Pascal 7 dan Delphi 7 dulu. Semoga.
 
@@ -74,3 +74,4 @@ Thank you. 😊
 [2]: https://beeography.wordpress.com/2006/09/12/just-wanna-let-you-know/
 [3]: https://freepascal.org/
 [4]: https://lazarus-ide.org/
+[5]: https://www.embarcadero.com/products/delphi/starter/
